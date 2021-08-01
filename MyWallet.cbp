@@ -34,12 +34,16 @@
 		</Compiler>
 		<Unit filename="FileWithUsers.cpp" />
 		<Unit filename="FileWithUsers.h" />
+		<Unit filename="IncomeMenager.cpp" />
+		<Unit filename="IncomeMenager.h" />
 		<Unit filename="Markup.cpp" />
 		<Unit filename="Markup.h" />
 		<Unit filename="MetodyPomocnicze.cpp" />
 		<Unit filename="MetodyPomocnicze.h" />
 		<Unit filename="MyWallet.cpp" />
 		<Unit filename="MyWallet.h" />
+		<Unit filename="OutcomeMenager.cpp" />
+		<Unit filename="OutcomeMenager.h" />
 		<Unit filename="UserMenager.cpp" />
 		<Unit filename="UserMenager.h" />
 		<Unit filename="Users.cpp" />

@@ -12,3 +12,13 @@ using namespace std;
         userMenager.userLogin();
 
     }
+      void MyWallet::addIncome()
+    {
+        userMenager.addIncome();
+
+    }
+void MyWallet::userLogout()
+    {
+        userMenager.userLogout();
+
+    }

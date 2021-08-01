@@ -19,11 +19,14 @@ class UserMenager
     User takeDataOfNewUser();
 
 public:
-    UserMenager(){//string nameOfFileWithUsers): fileWithUsers(nameOfFileWithUsers){
+    UserMenager(string nameOfFileWithUsers): fileWithUsers(nameOfFileWithUsers){
+    idOfLoggedUser =0;
     users = fileWithUsers.readUserFromFile();
     };
     void userRegistration();
     void userLogin();
+    void userLogout();
+    void addIncome();
 
 };
 

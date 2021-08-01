@@ -7,8 +7,6 @@ void UserMenager::userRegistration()
     User user = takeDataOfNewUser();
     users.push_back(user);
     fileWithUsers.addUserToFile(user);
-
-
 }
 
 User UserMenager::takeDataOfNewUser()
@@ -48,7 +46,7 @@ void UserMenager::userLogin()
     User user;
     string login = "", password = "";
 
-    cout << endl << "Login: ";
+    cout << "Login: ";
     cin>>login;
 
     vector <User>::iterator itr = users.begin();
@@ -82,4 +80,13 @@ void UserMenager::userLogin()
 
 }
 
+void UserMenager::addIncome()
+{
+    cout<<endl<<"ID zalogowanego: " <<idOfLoggedUser<<endl;
+}
+
+void UserMenager::userLogout()
+{
+    idOfLoggedUser = 0;
+}
 

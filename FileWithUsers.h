@@ -13,12 +13,13 @@ class FileWithUsers
 {
     CMarkup xml;
     const string NAME_OF_FILE_WITH_USERS;
-    bool checkIfLoginExist(User user);
+    //bool checkIfLoginExist(User user);
     string takeIDOfLastUser();
-public:
-//    fileWithUsers(string nameOfFileWithUsers): NAME_OF_FILE_WITH_USERS(nameOfFileWithUsers){
 
-    //};
+public:
+   FileWithUsers(string nameOfFileWithUsers): NAME_OF_FILE_WITH_USERS(nameOfFileWithUsers){
+
+    };
 
     void currentDate();
     vector <User> readUserFromFile();

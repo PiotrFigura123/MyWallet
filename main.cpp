@@ -4,11 +4,12 @@
 using namespace std;
 int main()
 {
-    MyWallet myWallet;
+    MyWallet myWallet("users.xml");
     //myWallet.userRegistration();
 
     myWallet.userLogin();
-
+    myWallet.userLogout();
+    myWallet.addIncome();
 }
 
 

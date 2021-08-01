@@ -12,10 +12,12 @@ class MyWallet
     UserMenager userMenager;
 
 public:
-//    MyWallet(string nameOfFileWithUsers): userMenager(nameOfFileWithUsers){};
+    MyWallet(string nameOfFileWithUsers): userMenager(nameOfFileWithUsers){
+    };
     void userRegistration();
     void userLogin();
-
+    void userLogout();
+    void addIncome();
 };
 
 #endif
