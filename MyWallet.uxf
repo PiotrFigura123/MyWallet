@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>20</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>MyWallet
+-
++</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>90</y>
+      <w>150</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>User
+-
+-id : string
+-login :string
+-password : string
+-name: string
+-surename : string
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>120</y>
+      <w>330</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>UserWallet
+-
+-userId: string
+-
++addMoney(): 
++addExpence(): voic
++currentMonthBalance(): void
++lastMonthBalance(): void
++userDayToDayBalance(): void
++getUsersIncomesFromFile(): void
++getUserOutcomeFromFile(): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>470</y>
+      <w>290</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>UserFile
+-
++Userfile();
++addUserToFile():vetor&lt;User&gt;
++checkIfUserExist():bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>480</y>
+      <w>320</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Incomes
+-
+NAME_OF_INCOMES_FILE: const string
+-
++addIncomeOfUser: void
++getIncomesOfUser: vector&lt;Cash&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>250</y>
+      <w>220</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>UserMenager
+-
+-loggedUserId: string
+-user :vector &lt;User&gt;
+-userFile: UserFile  ?
+-ssUserExistInFile():bool
+-changePassword():
+-userLogout():
+-
++userRegistration(): void
++userLogin(): int
++userMenu(): char
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>330</y>
+      <w>320</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Outcomes
+-
+NAME_OF_OUTCOMES_FILE: const string
+-
++addOutcomeOfUser: void
++getOutcomesOfUser: vector&lt;Cash&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>100</y>
+      <w>150</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>cash
+-
+-userId : string
+-id : string
+-date:string
+-item: string
+-amount: string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

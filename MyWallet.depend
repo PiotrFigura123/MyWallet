@@ -1,0 +1,102 @@
+# depslib dependency file v1.0
+1627486641 source:c:\users\admin\desktop\mywallet\mywallet\main.cpp
+	<iostream>
+	<time.h>
+	"Plik.h"
+	<iomanip>
+	<ctime>
+
+1303067212 c:\users\admin\desktop\mywallet\mywallet\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1303067212 source:c:\users\admin\desktop\mywallet\mywallet\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1627484881 c:\users\admin\desktop\mywallet\mywallet\plik.h
+	<iostream>
+	"Markup.h"
+
+1627485355 source:c:\users\admin\desktop\mywallet\mywallet\plik.cpp
+	"Plik.h"
+
+1303067212 source:c:\users\admin\desktop\mywallet\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1303067212 c:\users\admin\desktop\mywallet\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1627649887 source:c:\users\admin\desktop\mywallet\plik.cpp
+	"Plik.h"
+
+1627653226 c:\users\admin\desktop\mywallet\plik.h
+	<iostream>
+	<time.h>
+	"MetodyPomocnicze.h"
+	"Markup.h"
+
+1627634794 source:c:\users\admin\desktop\mywallet\metodypomocnicze.cpp
+	"MetodyPomocnicze.h"
+
+1627634794 c:\users\admin\desktop\mywallet\metodypomocnicze.h
+	<iostream>
+	<sstream>
+
+1627840132 source:c:\users\admin\desktop\mywallet\main.cpp
+	<iostream>
+	"MyWallet.h"
+	"UserMenager.h"
+
+1627840471 source:c:\users\admin\desktop\mywallet\usermenager.cpp
+	"UserMenager.h"
+
+1627654988 source:c:\users\admin\desktop\mywallet\users.cpp
+	"Users.h"
+
+1627654988 c:\users\admin\desktop\mywallet\users.h
+	<iostream>
+
+1627840008 source:c:\users\admin\desktop\mywallet\filewithusers.cpp
+	"FileWithUsers.h"
+
+1627840462 source:c:\users\admin\desktop\mywallet\mywallet.cpp
+	"MyWallet.h"
+
+1627832758 c:\users\admin\desktop\mywallet\mywallet.h
+	<iostream>
+	"MetodyPomocnicze.h"
+	"UserMenager.h"
+
+1627840295 c:\users\admin\desktop\mywallet\usermenager.h
+	<iostream>
+	"MetodyPomocnicze.h"
+	"Users.h"
+	<vector>
+	<fstream>
+	<windows.h>
+	<sstream>
+	"FileWithUsers.h"
+
+1627836835 c:\users\admin\desktop\mywallet\filewithusers.h
+	<iostream>
+	<time.h>
+	<vector>
+	"MetodyPomocnicze.h"
+	"Users.h"
+	"Markup.h"
+

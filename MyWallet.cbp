@@ -32,6 +32,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="FileWithUsers.cpp" />
+		<Unit filename="FileWithUsers.h" />
+		<Unit filename="Markup.cpp" />
+		<Unit filename="Markup.h" />
+		<Unit filename="MetodyPomocnicze.cpp" />
+		<Unit filename="MetodyPomocnicze.h" />
+		<Unit filename="MyWallet.cpp" />
+		<Unit filename="MyWallet.h" />
+		<Unit filename="UserMenager.cpp" />
+		<Unit filename="UserMenager.h" />
+		<Unit filename="Users.cpp" />
+		<Unit filename="Users.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
