@@ -64,7 +64,7 @@ void UserMenager::userLogin()
                     idOfLoggedUser = itr ->getId();
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    cout<<idOfLoggedUser;
+                    cout<<"ID of logged user : "<<idOfLoggedUser;
                     return;
                 }
             }
@@ -80,13 +80,18 @@ void UserMenager::userLogin()
 
 }
 
-void UserMenager::addIncome()
-{
-    cout<<endl<<"ID zalogowanego: " <<idOfLoggedUser<<endl;
-}
 
 void UserMenager::userLogout()
 {
     idOfLoggedUser = 0;
 }
 
+int UserMenager::getIdOfLoggedUser()
+{
+    return idOfLoggedUser;
+}
+
+void UserMenager::displauAllUsers()
+{
+    cout<<"Users size() " <<users.size()<<endl;
+}

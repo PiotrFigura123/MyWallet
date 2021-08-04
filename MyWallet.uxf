@@ -64,11 +64,15 @@
       <w>290</w>
       <h>100</h>
     </coordinates>
-    <panel_attributes>UserFile
+    <panel_attributes>fileWithUers
+-
+-NAME_OF_FILE_WITH_USERS : const string 
+-takeIDOfLastUser(): string
 -
 +Userfile();
-+addUserToFile():vetor&lt;User&gt;
-+checkIfUserExist():bool</panel_attributes>
++readUserFromDile() : vector&lt;User&gt;
++addUserToFile(): void
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -99,16 +103,18 @@ NAME_OF_INCOMES_FILE: const string
     </coordinates>
     <panel_attributes>UserMenager
 -
--loggedUserId: string
--user :vector &lt;User&gt;
--userFile: UserFile  ?
--ssUserExistInFile():bool
--changePassword():
--userLogout():
+-users :vector &lt;User&gt;
+-FileWithUsers fileWithUser;
+-loadIdOfLastUser() :int
+-idOfLoggedUser : int
+-takeDataOfNewUser(): User
+
+/-changePassword():
+/-userLogout():
 -
 +userRegistration(): void
 +userLogin(): int
-+userMenu(): char
+/+userMenu(): char
 
 </panel_attributes>
     <additional_attributes/>
