@@ -13,4 +13,11 @@
 <Name>bbb</Name>
 <Surename>bbb</Surename>
 </User>
+<User>
+<ID>3</ID>
+<Login>as</Login>
+<Password>as</Password>
+<Name>as</Name>
+<Surename>as</Surename>
+</User>
 </Users>

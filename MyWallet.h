@@ -10,8 +10,8 @@ using namespace std;
 class MyWallet
 {
     UserMenager userMenager;
-    IncomeMenager incomeMenager;
-   // OutcomeMenager outcomeMenager;
+    IncomeMenager *incomeMenager;
+    // OutcomeMenager outcomeMenager;
     const string NAME_OF_FILE_WITH_INCOMES;
     //const string NAME_OF_FILE_WITH_OUTCOMES;
 
@@ -19,13 +19,23 @@ public:
     MyWallet(string nameOfFileWithUsers, string nameOfFileWithIncomes):
         userMenager(nameOfFileWithUsers), NAME_OF_FILE_WITH_INCOMES(nameOfFileWithIncomes)
     {
+
+        incomeMenager = NULL;
+    };
+    ~MyWallet()
+    {
+        delete incomeMenager;
+        incomeMenager = NULL;
     };
     void userRegistration();
     void userLogin();
     void userLogout();
     void addIncomeOfLoggedUser();
     void dispiayAllUsers();
-    };
+    void displayAllIncomes();
+};
+
+
 
 
 #endif

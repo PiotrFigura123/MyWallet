@@ -1,44 +1,58 @@
 #include "FileWithIncome.h"
 
- vector <Income> FileWithIncome::loadIncomeOfUserFromFile(int ID_LOGGED_USER)
- {
-   /* Income income;
+vector <Income> FileWithIncome::loadIncomeOfUserFromFile(int LOGGED_USER_ID)
+{
+    Income income;
     vector <Income> incomes;
+    int incomeId;
+    int user;
+    string incomeDate;
+    string incomeComment;
+    int incomeValue;
 
     bool bSuccess = xml.Load( "income.xml" );
-    int incomeId, userId;
-    string date, comment, value;
-
     xml.FindElem();
     xml.IntoElem();
-    while(xml.FindElem("userId"))
+    while(xml.FindElem("income"))
     {
         xml.IntoElem();
-        while(xml.FindElem("userId"));
-        MCD_STR strSN = xml.GetData();
-        user.setId(atoi(MCD_2PCSZ(xml.GetData())));
-        xml.FindElem( "Login" );
-        user.setLogin(xml.GetData());
-        xml.FindElem( "Password" );
-        user.setPassword(xml.GetData());
-        xml.FindElem( "Name" );
-        user.setName(xml.GetData());
-        xml.FindElem( "Surename" );
-        user.setSurename(xml.GetData());
-        users.push_back(user);
+        xml.FindElem("incomeId");
+        //MCD_STR strSN = xml.GetData();
+        income.setIncomeId(atoi(MCD_2PCSZ(xml.GetData())));
+        lastIncomeId = atoi(MCD_2PCSZ(xml.GetData()));
+        xml.FindElem("userId");
+        //MCD_STR strSN = xml.GetData();
+        user = (atoi(MCD_2PCSZ(xml.GetData())));
+        if(user==LOGGED_USER_ID)
+        {
+            income.setUserId(user);
+            xml.FindElem( "incomeDate" );
+            income.setIncomeDate(xml.GetData());
+            xml.FindElem( "incomeComment" );
+            income.setIncomeComment(xml.GetData());
+            xml.FindElem( "incomeValue" );
+            //MCD_STR strSN = xml.GetData();
+            income.setIncomevalue(atoi(MCD_2PCSZ(xml.GetData())));
+
+            incomes.push_back(income);
+        }
+
         xml.OutOfElem();
-        return Income;
-*/
     }
+
+    return incomes;
+}
+
+
 void FileWithIncome::addIncomeOfLoggedUser(Income income)
 {
-  bool bSuccess = xml.Load( "income.xml" );
+    bool bSuccess = xml.Load( "income.xml" );
 
     if(!bSuccess)
     {
-    xml.AddElem( "incomes" );
+        xml.AddElem( "incomes" );
     }
-      xml.FindElem();
+    xml.FindElem();
     xml.IntoElem();
     xml.AddElem( "income" );
     xml.IntoElem();

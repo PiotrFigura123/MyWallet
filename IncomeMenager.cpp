@@ -1,25 +1,23 @@
 #include "IncomeMenager.h"
 
-void IncomeMenager::addIncomeOfLoggedUser()
+void IncomeMenager::addIncomeOfLoggedUser(int userId)
 {   Income income;
-    //userMenager.getIdOfLoggedUser();
-    income = takeIncomeOfUser();
+    income = takeIncomeOfUser(userId);
     incomes.push_back(income);
-    //cout<<endl<<"incomes size = "<<incomes.size();
     fileWithIncome.addIncomeOfLoggedUser(income);
 }
 
-Income IncomeMenager::takeIncomeOfUser()
+Income IncomeMenager::takeIncomeOfUser(int userId)
 {
 
     cout<<"Income registration: "<<endl;
     Income income;
-    int incomeId, userId=2, incomeValue;
+    int incomeId, incomeValue;
     string incomeDate, incomeComment;
 
     incomeId = takeIdOfLastIncomeFromFile();
     cout<<endl<<"INCOME ID = " <<2<<endl;
-    cout<<endl<<"ID_LOGGED_USER = " <<2<<endl;
+    cout<<endl<<"ID_LOGGED_USER = " <<userId<<endl;
     incomeDate = takeDateFromUser();
 
     cout<<endl<<"Date: "<<incomeDate<<endl;
@@ -135,5 +133,21 @@ do
     cout <<date<<endl;
     system("pause");
     return date;
+}
+
+
+void IncomeMenager::displayAllIncomes()
+{
+    for (int i=0; i<incomes.size(); i++)
+    {
+
+        cout<<"InomeId: "<< incomes[i].getIncomeId()<<endl;
+        cout<<"userId: "<<incomes[i].getUserId()<<endl;
+        cout<<"data: "<<incomes[i].getIncomeDate()<<endl;
+        cout<<"wartosc: "<<incomes[i].getIncomeValue()<<endl;
+        cout<<"Comment: "<<incomes[i].getIncomeComment()<<endl<<endl;
+
+    }
+    system("pause");
 }
 

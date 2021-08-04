@@ -9,29 +9,29 @@
 #include "Income.h"
 #include "UserMenager.h"
 #include "MetodyPomocnicze.h"
+
 #include "Markup.h"
 using namespace std;
 class IncomeMenager
 {
-        int ID_LOGGED_USER;
+        const int LOGGED_USER_ID;
         vector <Income> incomes;
         FileWithIncome fileWithIncome;
-        Income takeIncomeOfUser();
+        Income takeIncomeOfUser(int userId);
         int takeIdOfLastIncomeFromFile();
         bool checkDate(int year, int month, int day);
         string takeDateFromUser();
+
 public:
-    IncomeMenager()//string nameOfFileWithIncomes, int idOfLoggedUser ):fileWithIncome(nameOfFileWithIncomes),ID_LOGGED_USER(idOfLoggedUser)
+    IncomeMenager(string nameOfFileWithIncomes, int idOfLoggedUser):
+    fileWithIncome(nameOfFileWithIncomes), LOGGED_USER_ID(idOfLoggedUser)
     {
-    cout<<"Jestem w income menager"<<endl;
-    incomes = fileWithIncome.loadIncomeOfUserFromFile(ID_LOGGED_USER);
+
+    incomes = fileWithIncome.loadIncomeOfUserFromFile(LOGGED_USER_ID);
+
     };
-
-
-
-
-    void addIncomeOfLoggedUser();
-
+    void addIncomeOfLoggedUser(int userId);
+    void displayAllIncomes();
 };
 
 

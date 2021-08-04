@@ -10,8 +10,9 @@ void MyWallet::userRegistration()
 void MyWallet::userLogin()
 {
     userMenager.userLogin();
-
+    incomeMenager = new IncomeMenager(NAME_OF_FILE_WITH_INCOMES, userMenager.getIdOfLoggedUser());
 }
+
 
 void MyWallet::userLogout()
 {
@@ -21,10 +22,15 @@ void MyWallet::userLogout()
 
 void MyWallet::addIncomeOfLoggedUser()
 {
-   incomeMenager.addIncomeOfLoggedUser();
+   incomeMenager->addIncomeOfLoggedUser(userMenager.getIdOfLoggedUser());
 }
 
 void  MyWallet::dispiayAllUsers()
 {
     userMenager.displauAllUsers();
+}
+
+void MyWallet::displayAllIncomes()
+{
+   incomeMenager->displayAllIncomes();
 }

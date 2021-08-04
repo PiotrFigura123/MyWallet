@@ -1,14 +1,16 @@
 #include <iostream>
 #include "MyWallet.h"
 #include "UserMenager.h"
+
 using namespace std;
 int main()
 {
     MyWallet myWallet("users.xml", "income.xml");
     //myWallet.userRegistration();
    myWallet.userLogin();
-   myWallet.addIncomeOfLoggedUser();
-   //myWallet.dispiayAllUsers();
+   //myWallet.addIncomeOfLoggedUser();
+   myWallet.displayAllIncomes();
+   myWallet.dispiayAllUsers();
 }
 
 

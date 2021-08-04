@@ -17,17 +17,15 @@ class UserMenager
     int idOfLoggedUser;
     vector <User> users;
     FileWithUsers fileWithUsers;
-
     User takeDataOfNewUser();
     int loadIdOfLastUser();
-
 
 public:
     UserMenager(string nameOfFileWithUsers): fileWithUsers(nameOfFileWithUsers)
     {
     idOfLoggedUser =0;
-    users = fileWithUsers.readUserFromFile();
-    cout<<"user size for constructor : "<<users.size()<<endl;
+    users = fileWithUsers.readUserFromFile(nameOfFileWithUsers);
+
     };
 
     void displauAllUsers();

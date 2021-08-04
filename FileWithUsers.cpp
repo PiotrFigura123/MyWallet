@@ -1,6 +1,6 @@
 #include "FileWithUsers.h"
 
-vector <User> FileWithUsers::readUserFromFile()
+vector <User> FileWithUsers::readUserFromFile(string nameOfFileWithUsers)
 {
     User user;
     vector <User> users;

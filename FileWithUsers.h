@@ -22,7 +22,7 @@ public:
     };
 
     void currentDate();
-    vector <User> readUserFromFile();
+    vector <User> readUserFromFile(string nameOfFileWithUsers);
     void addUserToFile(User user);
 };
 
