@@ -28,7 +28,7 @@ public:
     {
 
     incomes = fileWithIncome.loadIncomeOfUserFromFile(LOGGED_USER_ID);
-
+    //cout<<"Jestem w konstruktorze. Incomes size = "<<endl;
     };
     void addIncomeOfLoggedUser(int userId);
     void displayAllIncomes();

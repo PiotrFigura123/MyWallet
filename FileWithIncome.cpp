@@ -2,6 +2,7 @@
 
 vector <Income> FileWithIncome::loadIncomeOfUserFromFile(int LOGGED_USER_ID)
 {
+    //cout<<"LOGGED_USER_ID = "<<LOGGED_USER_ID<<endl;
     Income income;
     vector <Income> incomes;
     int incomeId;
@@ -16,13 +17,13 @@ vector <Income> FileWithIncome::loadIncomeOfUserFromFile(int LOGGED_USER_ID)
     while(xml.FindElem("income"))
     {
         xml.IntoElem();
-        xml.FindElem("incomeId");
-        //MCD_STR strSN = xml.GetData();
+        xml.FindElem("IncomeId");
         income.setIncomeId(atoi(MCD_2PCSZ(xml.GetData())));
+        //cout<<"lastIncomeId = "<<atoi(MCD_2PCSZ(xml.GetData()))<<endl;
         lastIncomeId = atoi(MCD_2PCSZ(xml.GetData()));
         xml.FindElem("userId");
-        //MCD_STR strSN = xml.GetData();
         user = (atoi(MCD_2PCSZ(xml.GetData())));
+        //cout<<"User = "<<user<<endl;
         if(user==LOGGED_USER_ID)
         {
             income.setUserId(user);
@@ -31,7 +32,6 @@ vector <Income> FileWithIncome::loadIncomeOfUserFromFile(int LOGGED_USER_ID)
             xml.FindElem( "incomeComment" );
             income.setIncomeComment(xml.GetData());
             xml.FindElem( "incomeValue" );
-            //MCD_STR strSN = xml.GetData();
             income.setIncomevalue(atoi(MCD_2PCSZ(xml.GetData())));
 
             incomes.push_back(income);
@@ -39,7 +39,7 @@ vector <Income> FileWithIncome::loadIncomeOfUserFromFile(int LOGGED_USER_ID)
 
         xml.OutOfElem();
     }
-
+    cout<<"lastIncome = "<<lastIncomeId<<endl;
     return incomes;
 }
 
@@ -63,4 +63,15 @@ void FileWithIncome::addIncomeOfLoggedUser(Income income)
     xml.AddElem( "incomeValue", MetodyPomocnicze::konwerjsaIntNaString(income.getIncomeValue()));
     xml.Save( "income.xml" );
 
+}
+
+int FileWithIncome::getLastincomeId()
+{
+    return lastIncomeId;
+}
+
+int FileWithIncome::setNewLastincomeId()
+{
+    int newIncomeId = getLastincomeId()+1;
+    return  newIncomeId ;
 }
