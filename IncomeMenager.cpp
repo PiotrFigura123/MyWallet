@@ -10,6 +10,7 @@ void IncomeMenager::addIncomeOfLoggedUser(int userId)
 
 Income IncomeMenager::takeIncomeOfUser(int userId)
 {
+    char chooseDate;
     system("CLS");
     cout<<"Income registration: "<<endl;
     Income income;
@@ -19,7 +20,12 @@ Income IncomeMenager::takeIncomeOfUser(int userId)
     incomeId = fileWithIncome.setNewLastincomeId();
     //cout<<endl<<"INCOME ID = " <<incomeId<<endl;
     //cout<<endl<<"ID_LOGGED_USER = " <<userId<<endl;
+    cout<<"Current date? [y/n] : ";
+    cin>>chooseDate;
+    if(chooseDate=='n')
     incomeDate = takeDateFromUser();
+    else
+    incomeDate = setCurrentDate();
 
     cout<<endl<<"Date: "<<incomeDate<<endl;
     cout<<"Income comment: ";
@@ -147,3 +153,27 @@ void IncomeMenager::displayAllIncomes()
     system("pause");
 }
 
+string IncomeMenager::setCurrentDate()
+{
+    int year, month, day;
+    string currentDay, syear,smonth,sday;
+    time_t now;
+    struct tm nowLocal;
+    now = time(NULL);
+    nowLocal = *localtime(&now);
+    year = nowLocal.tm_year+1900;
+    month = nowLocal.tm_mon+1;
+    day = nowLocal.tm_mday;
+    //cout<<MetodyPomocnicze::checkDate(rok,miesiac, dzien);
+    syear =  MetodyPomocnicze::konwerjsaIntNaString(nowLocal.tm_year+1900);
+    smonth = MetodyPomocnicze::konwerjsaIntNaString(nowLocal.tm_mon+1);
+    sday = MetodyPomocnicze::konwerjsaIntNaString(nowLocal.tm_mday);
+    if(smonth.length()==1)
+        smonth="0"+smonth;
+    if(sday.length()==1)
+        sday="0"+sday;
+    currentDay = syear+"-"+smonth+"-"+sday;
+    //cout<<currentDay<<endl;
+    return currentDay;
+
+}

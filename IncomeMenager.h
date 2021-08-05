@@ -21,6 +21,7 @@ class IncomeMenager
         int takeIdOfLastIncomeFromFile();
         bool checkDate(int year, int month, int day);
         string takeDateFromUser();
+        string setCurrentDate();
 
 public:
     IncomeMenager(string nameOfFileWithIncomes, int idOfLoggedUser):

@@ -75,3 +75,7 @@ int FileWithIncome::setNewLastincomeId()
     int newIncomeId = getLastincomeId()+1;
     return  newIncomeId ;
 }
+
+
+
+

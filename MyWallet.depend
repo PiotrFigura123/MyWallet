@@ -103,7 +103,7 @@
 	"Users.h"
 	"Markup.h"
 
-1628155554 source:c:\users\admin\desktop\mywallet\incomemenager.cpp
+1628156364 source:c:\users\admin\desktop\mywallet\incomemenager.cpp
 	"IncomeMenager.h"
 
 1627845278 source:c:\users\admin\desktop\mywallet\outcomemenager.cpp
@@ -116,12 +116,12 @@
 1627914670 c:\users\admin\desktop\mywallet\income.h
 	<iostream>
 
-1628155165 source:c:\users\admin\desktop\mywallet\filewithincome.cpp
+1628156028 source:c:\users\admin\desktop\mywallet\filewithincome.cpp
 	"FileWithIncome.h"
 
 1627884839 source:c:\users\admin\desktop\mywallet\filewithoutcome.cpp
 
-1628154497 c:\users\admin\desktop\mywallet\incomemenager.h
+1628156029 c:\users\admin\desktop\mywallet\incomemenager.h
 	<iostream>
 	<vector>
 	<fstream>
