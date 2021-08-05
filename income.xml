@@ -90,4 +90,11 @@
 <incomeComment>rt</incomeComment>
 <incomeValue>0</incomeValue>
 </income>
+<income>
+<IncomeId>14</IncomeId>
+<userId>1</userId>
+<incomeDate>2021-08-05</incomeDate>
+<incomeComment>qwewr</incomeComment>
+<incomeValue>100</incomeValue>
+</income>
 </incomes>

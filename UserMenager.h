@@ -10,6 +10,7 @@
 #include "FileWithUsers.h"
 #include "IncomeMenager.h"
 #include "FileWithIncome.h"
+#include "OutcomeMenager.h"
 
 using namespace std;
 class UserMenager

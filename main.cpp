@@ -5,10 +5,13 @@
 using namespace std;
 int main()
 {
-    MyWallet myWallet("users.xml", "income.xml");
+    MyWallet myWallet("users.xml", "income.xml", "outcome.xml");
     //myWallet.userRegistration();
    myWallet.userLogin();
-   myWallet.addIncomeOfLoggedUser();
+   //myWallet.addIncomeOfLoggedUser();
+   myWallet.addOutcomeOfLoggedUser();
+   //myWallet.userLogin();
+   myWallet.addOutcomeOfLoggedUser();
    //myWallet.displayAllIncomes();
    //myWallet.dispiayAllUsers();
 }

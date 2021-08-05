@@ -57,7 +57,7 @@
 	<iostream>
 	<sstream>
 
-1628152026 source:c:\users\admin\desktop\mywallet\main.cpp
+1628169930 source:c:\users\admin\desktop\mywallet\main.cpp
 	<iostream>
 	"MyWallet.h"
 	"UserMenager.h"
@@ -74,16 +74,17 @@
 1628083078 source:c:\users\admin\desktop\mywallet\filewithusers.cpp
 	"FileWithUsers.h"
 
-1628084764 source:c:\users\admin\desktop\mywallet\mywallet.cpp
+1628169477 source:c:\users\admin\desktop\mywallet\mywallet.cpp
 	"MyWallet.h"
 
-1628082815 c:\users\admin\desktop\mywallet\mywallet.h
+1628169477 c:\users\admin\desktop\mywallet\mywallet.h
 	<iostream>
 	"MetodyPomocnicze.h"
 	"UserMenager.h"
 	"IncomeMenager.h"
+	"OutcomeMenager.h"
 
-1628083078 c:\users\admin\desktop\mywallet\usermenager.h
+1628169044 c:\users\admin\desktop\mywallet\usermenager.h
 	<iostream>
 	"MetodyPomocnicze.h"
 	"Users.h"
@@ -94,6 +95,7 @@
 	"FileWithUsers.h"
 	"IncomeMenager.h"
 	"FileWithIncome.h"
+	"OutcomeMenager.h"
 
 1628083078 c:\users\admin\desktop\mywallet\filewithusers.h
 	<iostream>
@@ -106,9 +108,11 @@
 1628156364 source:c:\users\admin\desktop\mywallet\incomemenager.cpp
 	"IncomeMenager.h"
 
-1627845278 source:c:\users\admin\desktop\mywallet\outcomemenager.cpp
+1628169343 source:c:\users\admin\desktop\mywallet\outcomemenager.cpp
+	"OutcomeMenager.h"
 
-1627849141 source:c:\users\admin\desktop\mywallet\outcome.cpp
+1628167077 source:c:\users\admin\desktop\mywallet\outcome.cpp
+	"Outcome.h"
 
 1627914066 source:c:\users\admin\desktop\mywallet\income.cpp
 	"Income.h"
@@ -119,7 +123,8 @@
 1628156028 source:c:\users\admin\desktop\mywallet\filewithincome.cpp
 	"FileWithIncome.h"
 
-1627884839 source:c:\users\admin\desktop\mywallet\filewithoutcome.cpp
+1628169930 source:c:\users\admin\desktop\mywallet\filewithoutcome.cpp
+	"FileWithOutcome.h"
 
 1628156029 c:\users\admin\desktop\mywallet\incomemenager.h
 	<iostream>
@@ -139,4 +144,26 @@
 	"Income.h"
 	"Markup.h"
 	"MetodyPomocnicze.h"
+
+1628156856 c:\users\admin\desktop\mywallet\outcome.h
+	<iostream>
+
+1628169865 c:\users\admin\desktop\mywallet\filewithoutcome.h
+	<iostream>
+	<vector>
+	"Outcome.h"
+	"Markup.h"
+	"MetodyPomocnicze.h"
+
+1628169865 c:\users\admin\desktop\mywallet\outcomemenager.h
+	<iostream>
+	<vector>
+	<fstream>
+	<windows.h>
+	<sstream>
+	"FileWithOutcome.h"
+	"UserMenager.h"
+	"MetodyPomocnicze.h"
+	"Outcome.h"
+	"Markup.h"
 
