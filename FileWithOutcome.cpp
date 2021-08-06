@@ -19,11 +19,11 @@ vector <Outcome> FileWithOutcome::loadOutcomeOfUserFromFile(int LOGGED_USER_ID)
         xml.IntoElem();
         xml.FindElem("OutcomeId");
         outcome.setOutcomeId(atoi(MCD_2PCSZ(xml.GetData())));
-        //cout<<"lastIncomeId = "<<atoi(MCD_2PCSZ(xml.GetData()))<<endl;
+
         lastOutcomeId = atoi(MCD_2PCSZ(xml.GetData()));
         xml.FindElem("userId");
         user = (atoi(MCD_2PCSZ(xml.GetData())));
-        //cout<<"User = "<<user<<endl;
+
         if(user==LOGGED_USER_ID)
         {
             outcome.setUserId(user);
@@ -33,7 +33,8 @@ vector <Outcome> FileWithOutcome::loadOutcomeOfUserFromFile(int LOGGED_USER_ID)
             outcome.setOutcomeComment(xml.GetData());
             xml.FindElem( "outcomeValue" );
             outcome.setOutcomevalue(atoi(MCD_2PCSZ(xml.GetData())));
-
+            xml.FindElem( "outcomeDateValue" );
+            outcome.setOutcomeDateValue(atoi(MCD_2PCSZ(xml.GetData())));
             outcomes.push_back(outcome);
         }
 
@@ -61,6 +62,7 @@ void FileWithOutcome::addOutcomeOfLoggedUser(Outcome outcome)
     xml.AddElem( "outcomeDate",outcome.getOutcomeDate());
     xml.AddElem( "outcomeComment", outcome.getOutcomeComment());
     xml.AddElem( "outcomeValue", MetodyPomocnicze::konwerjsaIntNaString(outcome.getOutcomeValue()));
+    xml.AddElem( "outcomeDateValue", MetodyPomocnicze::konwerjsaIntNaString(outcome.getOutcomeDateValue()));
     xml.Save( "outcome.xml" );
 
 }

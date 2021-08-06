@@ -14,7 +14,8 @@ class MetodyPomocnicze
         static char wybierzOpcjeZMenuGlownego();
         static char wybierzOpcjeZMenuUzytkownika();
         static bool checkDate(int year, int month , int day);
-        static int compareDates(int y, int m, int d);
+        static double convertDateIntoValue(string date);
+
 };
 
 #endif // METODYPOMOCNICZE_H

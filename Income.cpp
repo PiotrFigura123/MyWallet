@@ -21,6 +21,10 @@ int Income::getIncomeValue()
 {
     return incomeValue;
 }
+double Income::getIncomeDateValue()
+{
+    return incomeDateValue;
+}
 
 void Income::setIncomeId(int newIncomeId)
 {
@@ -42,4 +46,9 @@ void Income::setIncomevalue(int newIncomeValue)
 void Income::setUserId(int newUserId)
 {
     userId = newUserId;
+}
+
+void Income::setIncomeDateValue(double newIncomeDateValue)
+{
+    incomeDateValue = newIncomeDateValue;
 }

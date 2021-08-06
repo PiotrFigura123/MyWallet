@@ -16,10 +16,10 @@ Outcome OutcomeMenager::takeOutcomeOfUser(int userId)
     Outcome outcome;
     int outcomeId, outcomeValue;
     string outcomeDate, outcomeComment;
+    double outcomeDateValue;
 
     outcomeId = fileWithOutcome.setNewLastOutcomeId();
-    //cout<<endl<<"OutCOME ID = " <<incomeId<<endl;
-    //cout<<endl<<"ID_LOGGED_USER = " <<userId<<endl;
+
     cout<<"Current date? [y/n] : ";
     cin>>chooseDate;
     if(chooseDate=='n')
@@ -27,6 +27,7 @@ Outcome OutcomeMenager::takeOutcomeOfUser(int userId)
     else
     outcomeDate = setCurrentDate();
 
+    outcomeDateValue = MetodyPomocnicze::convertDateIntoValue(outcomeDate);
     cout<<endl<<"Date: "<<outcomeDate<<endl;
     cout<<"Outcome comment: ";
     cin>>outcomeComment;
@@ -39,6 +40,7 @@ Outcome OutcomeMenager::takeOutcomeOfUser(int userId)
     outcome.setOutcomeDate(outcomeDate);
     outcome.setOutcomeComment(outcomeComment);
     outcome.setOutcomevalue(outcomeValue);
+    outcome.setOutcomeDateValue(outcomeDateValue);
     return outcome;
 }
 

@@ -11,6 +11,7 @@ class Outcome
     string outcomeDate;
     string outcomeComment;
     int outcomeValue;
+    double outcomeDateValue;
 
 public:
     int getOutcomeId();
@@ -18,12 +19,14 @@ public:
     string getOutcomeDate();
     string getOutcomeComment();
     int getOutcomeValue();
+    double getOutcomeDateValue();
 
     void setOutcomeId(int newOutcomeId);
     void setUserId(int newUserId);
     void setOutcomeDate(string newOutcomeDate);
     void setOutcomeComment(string newOutcomeComment);
     void setOutcomevalue(int newOutcomeValue);
+    void setOutcomeDateValue(double newOutcomeDateValue);
 
 };
 

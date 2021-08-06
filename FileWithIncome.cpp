@@ -33,6 +33,8 @@ vector <Income> FileWithIncome::loadIncomeOfUserFromFile(int LOGGED_USER_ID)
             income.setIncomeComment(xml.GetData());
             xml.FindElem( "incomeValue" );
             income.setIncomevalue(atoi(MCD_2PCSZ(xml.GetData())));
+            xml.FindElem( "incomeDateValue" );
+            income.setIncomeDateValue(atoi(MCD_2PCSZ(xml.GetData())));
 
             incomes.push_back(income);
         }
@@ -61,6 +63,7 @@ void FileWithIncome::addIncomeOfLoggedUser(Income income)
     xml.AddElem( "incomeDate",income.getIncomeDate());
     xml.AddElem( "incomeComment", income.getIncomeComment());
     xml.AddElem( "incomeValue", MetodyPomocnicze::konwerjsaIntNaString(income.getIncomeValue()));
+    xml.AddElem( "incomeDateValue", MetodyPomocnicze::konwerjsaIntNaString(income.getIncomeDateValue()));
     xml.Save( "income.xml" );
 
 }

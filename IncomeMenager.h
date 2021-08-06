@@ -22,6 +22,7 @@ class IncomeMenager
         bool checkDate(int year, int month, int day);
         string takeDateFromUser();
         string setCurrentDate();
+        int convertDateIntoInt(string date);
 
 public:
     IncomeMenager(string nameOfFileWithIncomes, int idOfLoggedUser):
@@ -33,6 +34,7 @@ public:
     };
     void addIncomeOfLoggedUser(int userId);
     void displayAllIncomes();
+    void displayAllIncomesInOrder();
 };
 
 

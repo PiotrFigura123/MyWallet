@@ -11,6 +11,7 @@ class Income
     string incomeDate;
     string incomeComment;
     int incomeValue;
+    double incomeDateValue;
 
 public:
     int getIncomeId();
@@ -18,12 +19,14 @@ public:
     string getIncomeDate();
     string getIncomeComment();
     int getIncomeValue();
+    double getIncomeDateValue();
 
     void setIncomeId(int newIncomeId);
     void setUserId(int newUserId);
     void setIncomeDate(string newIncomeDate);
     void setIncomeComment(string newIncomeComment);
     void setIncomevalue(int newIncomeValue);
+    void setIncomeDateValue(double newIncomeDateValue);
 
 };
 

@@ -8,10 +8,13 @@ int main()
     MyWallet myWallet("users.xml", "income.xml", "outcome.xml");
     //myWallet.userRegistration();
    myWallet.userLogin();
-   //myWallet.addIncomeOfLoggedUser();
+   myWallet.addOutcomeOfLoggedUser();
+   myWallet.addOutcomeOfLoggedUser();
+   myWallet.addOutcomeOfLoggedUser();
    myWallet.addOutcomeOfLoggedUser();
    //myWallet.userLogin();
-   myWallet.addOutcomeOfLoggedUser();
+   //myWallet.addOutcomeOfLoggedUser();
+   //myWallet.currentMonthBalance();
    //myWallet.displayAllIncomes();
    //myWallet.dispiayAllUsers();
 }

@@ -108,9 +108,28 @@ bool MetodyPomocnicze::checkDate(int year, int month, int day)
         return false;
 }
 
-int MetodyPomocnicze::compareDates(int y, int m, int d)
+double MetodyPomocnicze::convertDateIntoValue(string date)
 {
-    int sum=0;
-    sum = y*1000+m*50+d;
+    double sum=0;
+    string syear, smonth,sday;
+    int year,month,day;
+    syear = date.substr(0,4);
+    smonth = date.substr(5,2);
+    sday = date.substr(8,2);
+    cout<<"syear ="<<syear<<" smonth ="<<smonth<<" sday = "<<sday<<endl;
+
+    year = MetodyPomocnicze::konwersjaStringNaInt(syear);
+    month = MetodyPomocnicze::konwersjaStringNaInt(smonth);
+    day = MetodyPomocnicze::konwersjaStringNaInt(sday);
+    system("pause");
+    cout<<"Year: "<<year<<endl;
+    cout<<"Month: "<<month<<endl;
+    cout<<"Day: "<<day<<endl;
+    year = year*500;
+    month = month*32;
+    cout<<"Year: "<<year<<endl;
+    cout<<"Month: "<<month<<endl;
+    sum = year+month+day;
+    cout<<"SUM = "<<sum<<endl;
     return sum;
 }

@@ -39,3 +39,10 @@ void MyWallet::displayAllIncomes()
 {
    incomeMenager->displayAllIncomes();
 }
+
+void MyWallet::currentMonthBalance()
+{
+    incomeMenager->displayAllIncomesInOrder();
+    //outcomeMenager->displayAllOutcomesInOrder();
+
+}

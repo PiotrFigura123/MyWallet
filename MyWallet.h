@@ -37,6 +37,7 @@ public:
     void addOutcomeOfLoggedUser();
     void dispiayAllUsers();
     void displayAllIncomes();
+    void currentMonthBalance();
 };
 
 

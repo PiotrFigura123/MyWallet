@@ -14,12 +14,11 @@ Income IncomeMenager::takeIncomeOfUser(int userId)
     system("CLS");
     cout<<"Income registration: "<<endl;
     Income income;
-    int incomeId, incomeValue;
+    int incomeId, incomeValue ;
     string incomeDate, incomeComment;
-
+    double incomeDateValue;
     incomeId = fileWithIncome.setNewLastincomeId();
-    //cout<<endl<<"INCOME ID = " <<incomeId<<endl;
-    //cout<<endl<<"ID_LOGGED_USER = " <<userId<<endl;
+
     cout<<"Current date? [y/n] : ";
     cin>>chooseDate;
     if(chooseDate=='n')
@@ -27,6 +26,7 @@ Income IncomeMenager::takeIncomeOfUser(int userId)
     else
     incomeDate = setCurrentDate();
 
+    incomeDateValue = MetodyPomocnicze::convertDateIntoValue(incomeDate);
     cout<<endl<<"Date: "<<incomeDate<<endl;
     cout<<"Income comment: ";
     cin>>incomeComment;
@@ -39,6 +39,7 @@ Income IncomeMenager::takeIncomeOfUser(int userId)
     income.setIncomeDate(incomeDate);
     income.setIncomeComment(incomeComment);
     income.setIncomevalue(incomeValue);
+    income.setIncomeDateValue(incomeDateValue);
     return income;
 }
 
@@ -153,6 +154,10 @@ void IncomeMenager::displayAllIncomes()
     system("pause");
 }
 
+void IncomeMenager::displayAllIncomesInOrder()
+{
+
+}
 string IncomeMenager::setCurrentDate()
 {
     int year, month, day;

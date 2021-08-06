@@ -22,6 +22,11 @@ int Outcome::getOutcomeValue()
     return outcomeValue;
 }
 
+double Outcome::getOutcomeDateValue()
+{
+    return outcomeDateValue;
+}
+
 void Outcome::setOutcomeId(int newOutcomeId)
 {
     outcomeId = newOutcomeId;
@@ -42,4 +47,8 @@ void Outcome::setOutcomevalue(int newOutcomeValue)
 void Outcome::setUserId(int newUserId)
 {
     userId = newUserId;
+}
+void Outcome::setOutcomeDateValue(double newOutcomeDateValue)
+{
+    outcomeDateValue = newOutcomeDateValue;
 }
