@@ -35,14 +35,23 @@ void  MyWallet::dispiayAllUsers()
     userMenager.displauAllUsers();
 }
 
-void MyWallet::displayAllIncomes()
+void MyWallet::displayAllIncomesInOrder()
 {
-   incomeMenager->displayAllIncomes();
+   incomeMenager->displayAllIncomesInOrder();
 }
 
-void MyWallet::currentMonthBalance()
+void MyWallet::displayCurrentMonthBalance()
+{   system("cls");
+    incomeMenager->displayCurrentMonthIncomesInOrder();
+    system("cls");
+    outcomeMenager->displayCurrentMonthOutcomesInOrder();
+    system("cls");
+}
+void MyWallet::displayLastMonthBalance()
 {
-    incomeMenager->displayAllIncomesInOrder();
-    //outcomeMenager->displayAllOutcomesInOrder();
-
+    system("cls");
+    incomeMenager->displayLastMonthIncomes();
+    system("cls");
+    //outcomeMenager->displayChoosenPerionOutcomes();
+    system("cls");
 }

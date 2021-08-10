@@ -28,10 +28,11 @@ public:
     {
 
     outcomes = fileWithOutcome.loadOutcomeOfUserFromFile(LOGGED_USER_ID);
-    cout<<"Jestem w konstruktorze. Outcomes size = "<<outcomes.size()<<endl;
+    //cout<<"Jestem w konstruktorze. Outcomes size = "<<outcomes.size()<<endl;
     };
     void addOutcomeOfLoggedUser(int userId);
     void displayAllOutcomes();
+    void displayCurrentMonthOutcomesInOrder();
 };
 
 

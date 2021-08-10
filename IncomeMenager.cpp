@@ -22,9 +22,9 @@ Income IncomeMenager::takeIncomeOfUser(int userId)
     cout<<"Current date? [y/n] : ";
     cin>>chooseDate;
     if(chooseDate=='n')
-    incomeDate = takeDateFromUser();
+        incomeDate = takeDateFromUser();
     else
-    incomeDate = setCurrentDate();
+        incomeDate = setCurrentDate();
 
     incomeDateValue = MetodyPomocnicze::convertDateIntoValue(incomeDate);
     cout<<endl<<"Date: "<<incomeDate<<endl;
@@ -139,7 +139,7 @@ string IncomeMenager::takeDateFromUser()
 }
 
 
-void IncomeMenager::displayAllIncomes()
+void IncomeMenager::displayAllIncomesInOrder()
 {
     for (int i=0; i<incomes.size(); i++)
     {
@@ -147,17 +147,39 @@ void IncomeMenager::displayAllIncomes()
         cout<<"InomeId: "<< incomes[i].getIncomeId()<<endl;
         cout<<"userId: "<<incomes[i].getUserId()<<endl;
         cout<<"data: "<<incomes[i].getIncomeDate()<<endl;
+        cout<<"Comment: "<<incomes[i].getIncomeComment()<<endl;
         cout<<"wartosc: "<<incomes[i].getIncomeValue()<<endl;
-        cout<<"Comment: "<<incomes[i].getIncomeComment()<<endl<<endl;
 
     }
     system("pause");
 }
 
-void IncomeMenager::displayAllIncomesInOrder()
+void IncomeMenager::displayCurrentMonthIncomesInOrder()
 {
+    vector <Income> incomesInOrder;
+    string currentMonth;
+    string incomeMonth;
+    int sumOfIncomes=0;
+    currentMonth = (setCurrentDate()).substr(0,7);;
+    //cout<<"currentMonth = "<<currentMonth<<endl;
+    for (int i=0; i<incomes.size(); i++)
+    {
+        incomeMonth = (incomes[i].getIncomeDate()).substr(0,7);
+        if( currentMonth == incomeMonth)
+        {
+            cout<<"data: "<<incomes[i].getIncomeDate()<<endl;
+            cout<<"Comment: "<<incomes[i].getIncomeComment()<<endl;
+            sumOfIncomes = sumOfIncomes+incomes[i].getIncomeValue();
+            cout<<"wartosc: "<<incomes[i].getIncomeValue()<<endl;
 
+        }
+    }
+
+
+    cout<<"Sum of incomes = "<<sumOfIncomes<<endl;
+    system("pause");
 }
+
 string IncomeMenager::setCurrentDate()
 {
     int year, month, day;
@@ -181,4 +203,34 @@ string IncomeMenager::setCurrentDate()
     //cout<<currentDay<<endl;
     return currentDay;
 
+}
+
+
+void IncomeMenager::displayLastMonthIncomes()
+{
+    string lastMonthDate,incomeDate, syear,smonth;
+    int month, sumOfIncomes=0;
+    syear = (setCurrentDate()).substr(0,4);
+    smonth = (setCurrentDate()).substr(5,2);
+    month = MetodyPomocnicze::konwersjaStringNaInt(smonth)-1;
+    smonth =MetodyPomocnicze::konwerjsaIntNaString(month);
+    if(smonth.length()==1)
+        smonth = "0"+smonth;
+    lastMonthDate= syear+"-"+smonth;
+    //cout<<"Last month date "<<lastMonthDate<<endl;
+    for (int i=0; i<incomes.size(); i++)
+    {
+        incomeDate = (incomes[i].getIncomeDate()).substr(0,7);
+        //cout<<"incomeDate = "<<incomeDate<<endl;
+        if( incomeDate == lastMonthDate)
+        {
+            cout<<"data: "<<incomes[i].getIncomeDate()<<endl;
+            cout<<"Comment: "<<incomes[i].getIncomeComment()<<endl;
+            sumOfIncomes = sumOfIncomes+incomes[i].getIncomeValue();
+            cout<<"wartosc: "<<incomes[i].getIncomeValue()<<endl;
+        }
+    }
+    cout<<"Sum of incomes = "<<sumOfIncomes<<endl;
+
+    system("pause");
 }

@@ -32,6 +32,7 @@ vector <Income> FileWithIncome::loadIncomeOfUserFromFile(int LOGGED_USER_ID)
             xml.FindElem( "incomeComment" );
             income.setIncomeComment(xml.GetData());
             xml.FindElem( "incomeValue" );
+            sumOfIncomes = sumOfIncomes+atoi(MCD_2PCSZ(xml.GetData()));
             income.setIncomevalue(atoi(MCD_2PCSZ(xml.GetData())));
             xml.FindElem( "incomeDateValue" );
             income.setIncomeDateValue(atoi(MCD_2PCSZ(xml.GetData())));
@@ -41,7 +42,8 @@ vector <Income> FileWithIncome::loadIncomeOfUserFromFile(int LOGGED_USER_ID)
 
         xml.OutOfElem();
     }
-    cout<<"lastIncome = "<<lastIncomeId<<endl;
+    //cout<<"sumOfIncomes = "<<sumOfIncomes<<endl;
+    //cout<<"lastIncome = "<<lastIncomeId<<endl;
     return incomes;
 }
 

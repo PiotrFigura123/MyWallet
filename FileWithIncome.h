@@ -16,6 +16,7 @@ public:
     FileWithIncome(string nameOfFilesWithIncome):NAME_OF_FILE_WITH_INCOMES(nameOfFilesWithIncome)
      {
         lastIncomeId=0;
+        sumOfIncomes=0;
         };
     vector <Income> loadIncomeOfUserFromFile(int LOGGED_USER_ID);
     void addIncomeOfLoggedUser(Income income);

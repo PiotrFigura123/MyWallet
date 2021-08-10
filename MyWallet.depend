@@ -57,7 +57,7 @@
 	<iostream>
 	<sstream>
 
-1628242632 source:c:\users\admin\desktop\mywallet\main.cpp
+1628604021 source:c:\users\admin\desktop\mywallet\main.cpp
 	<iostream>
 	"MyWallet.h"
 	"UserMenager.h"
@@ -74,10 +74,10 @@
 1628083078 source:c:\users\admin\desktop\mywallet\filewithusers.cpp
 	"FileWithUsers.h"
 
-1628174623 source:c:\users\admin\desktop\mywallet\mywallet.cpp
+1628603160 source:c:\users\admin\desktop\mywallet\mywallet.cpp
 	"MyWallet.h"
 
-1628172925 c:\users\admin\desktop\mywallet\mywallet.h
+1628603160 c:\users\admin\desktop\mywallet\mywallet.h
 	<iostream>
 	"MetodyPomocnicze.h"
 	"UserMenager.h"
@@ -105,10 +105,10 @@
 	"Users.h"
 	"Markup.h"
 
-1628243030 source:c:\users\admin\desktop\mywallet\incomemenager.cpp
+1628603795 source:c:\users\admin\desktop\mywallet\incomemenager.cpp
 	"IncomeMenager.h"
 
-1628243040 source:c:\users\admin\desktop\mywallet\outcomemenager.cpp
+1628601455 source:c:\users\admin\desktop\mywallet\outcomemenager.cpp
 	"OutcomeMenager.h"
 
 1628242539 source:c:\users\admin\desktop\mywallet\outcome.cpp
@@ -120,13 +120,13 @@
 1628242011 c:\users\admin\desktop\mywallet\income.h
 	<iostream>
 
-1628242786 source:c:\users\admin\desktop\mywallet\filewithincome.cpp
+1628601455 source:c:\users\admin\desktop\mywallet\filewithincome.cpp
 	"FileWithIncome.h"
 
-1628242240 source:c:\users\admin\desktop\mywallet\filewithoutcome.cpp
+1628601455 source:c:\users\admin\desktop\mywallet\filewithoutcome.cpp
 	"FileWithOutcome.h"
 
-1628174055 c:\users\admin\desktop\mywallet\incomemenager.h
+1628603160 c:\users\admin\desktop\mywallet\incomemenager.h
 	<iostream>
 	<vector>
 	<fstream>
@@ -138,7 +138,7 @@
 	"MetodyPomocnicze.h"
 	"Markup.h"
 
-1628155063 c:\users\admin\desktop\mywallet\filewithincome.h
+1628598276 c:\users\admin\desktop\mywallet\filewithincome.h
 	<iostream>
 	<vector>
 	"Income.h"
@@ -155,7 +155,7 @@
 	"Markup.h"
 	"MetodyPomocnicze.h"
 
-1628169865 c:\users\admin\desktop\mywallet\outcomemenager.h
+1628601455 c:\users\admin\desktop\mywallet\outcomemenager.h
 	<iostream>
 	<vector>
 	<fstream>

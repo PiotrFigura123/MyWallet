@@ -40,7 +40,7 @@ vector <Outcome> FileWithOutcome::loadOutcomeOfUserFromFile(int LOGGED_USER_ID)
 
         xml.OutOfElem();
     }
-    cout<<"lastOutcome = "<<lastOutcomeId<<endl;
+    //cout<<"lastOutcome = "<<lastOutcomeId<<endl;
     return outcomes;
 }
 

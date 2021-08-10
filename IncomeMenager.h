@@ -33,8 +33,10 @@ public:
     //cout<<"Jestem w konstruktorze. Incomes size = "<<endl;
     };
     void addIncomeOfLoggedUser(int userId);
-    void displayAllIncomes();
+    //void displayAllIncomes();
     void displayAllIncomesInOrder();
+    void displayCurrentMonthIncomesInOrder();
+    void displayLastMonthIncomes();
 };
 
 

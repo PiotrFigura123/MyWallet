@@ -179,3 +179,31 @@ string OutcomeMenager::setCurrentDate()
     return currentDay;
 
 }
+
+void OutcomeMenager::displayCurrentMonthOutcomesInOrder()
+{
+    string currentMonth;
+    string outcomeMonth;
+    int sumOfOutcomes=0;
+    currentMonth = (setCurrentDate()).substr(0,7);;
+   // cout<<"currentMonth = "<<currentMonth<<endl;
+    for (int i=0; i<outcomes.size(); i++)
+    {
+        outcomeMonth = (outcomes[i].getOutcomeDate()).substr(0,7);
+
+        if( currentMonth == outcomeMonth)
+        {
+           // cout<<"InomeId: "<< outcomes[i].getOutcomeId()<<endl;
+       // cout<<"userId: "<<outcomes[i].getUserId()<<endl;
+        cout<<"data: "<<outcomes[i].getOutcomeDate()<<endl;
+        cout<<"Comment: "<<outcomes[i].getOutcomeComment()<<endl;
+        sumOfOutcomes = sumOfOutcomes+outcomes[i].getOutcomeValue();
+        cout<<"wartosc: "<<outcomes[i].getOutcomeValue()<<endl;
+        }
+
+
+    }
+    cout<<"Sum of outcomes = "<<sumOfOutcomes<<endl;
+    system("pause");
+}
+
