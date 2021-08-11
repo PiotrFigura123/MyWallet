@@ -24,6 +24,7 @@ public:
     void currentDate();
     vector <User> readUserFromFile(string nameOfFileWithUsers);
     void addUserToFile(User user);
+    void addAllUsersToFile(vector<User>users);
 };
 
 #endif

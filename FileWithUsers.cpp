@@ -74,3 +74,30 @@ void FileWithUsers::currentDate()
     cout<<currentDay<<endl;
 }
 
+
+
+void FileWithUsers::addAllUsersToFile(vector<User>users)
+{
+    cout<<"ZAPISUJE ZMIANE HASLA DO PLIKU"<<endl;
+    xml.Load( "users.xml" );
+    while (xml.FindElem())
+    xml.RemoveElem();
+    xml.AddElem( "Users" );
+    for(int i=0;i<users.size();i++)
+    {
+    xml.FindElem();
+    xml.IntoElem();
+    xml.AddElem( "User" );
+    xml.IntoElem();
+    xml.AddElem( "ID", users[i].getId());
+    xml.AddElem( "Login", users[i].getLogin());
+    xml.AddElem( "Password", users[i].getPassword());
+    xml.AddElem( "Name", users[i].getName());
+    xml.AddElem( "Surename", users[i].getSurename() );
+    xml.OutOfElem();
+    xml.OutOfElem();
+    }
+    xml.Save( "users.xml" );
+    system ("pause");
+
+}

@@ -35,7 +35,8 @@ public:
     void userLogout();
     void addIncomeOfLoggedUser();
     int getIdOfLoggedUser();
-
+    bool isUserLogged();
+    void updateUserPassword();
 
 };
 

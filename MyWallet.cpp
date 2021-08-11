@@ -61,3 +61,12 @@ void MyWallet::displayChoosenPeriodBalance()
     system("cls");
     incomeMenager->choosenPeriodIncomes();
 }
+ bool  MyWallet::isUserLogged()
+ {
+     return userMenager.isUserLogged();
+ }
+
+ void MyWallet::changePasswordOfUser()
+ {
+     userMenager.updateUserPassword();
+ }

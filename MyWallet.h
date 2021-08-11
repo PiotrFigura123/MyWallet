@@ -40,6 +40,8 @@ public:
     void displayCurrentMonthBalance();
     void displayLastMonthBalance();
     void displayChoosenPeriodBalance();
+    bool isUserLogged();
+    void changePasswordOfUser();
 };
 
 

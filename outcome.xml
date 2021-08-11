@@ -63,4 +63,12 @@
 <outcomeValue>1</outcomeValue>
 <outcomeDateValue>1010766</outcomeDateValue>
 </outcome>
+<outcome>
+<OutcomeId>9</OutcomeId>
+<userId>2</userId>
+<outcomeDate>2021-08-02</outcomeDate>
+<outcomeComment>test</outcomeComment>
+<outcomeValue>44</outcomeValue>
+<outcomeDateValue>1010758</outcomeDateValue>
+</outcome>
 </outcomes>

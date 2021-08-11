@@ -95,3 +95,38 @@ void UserMenager::displauAllUsers()
 {
     cout<<"Users size() " <<users.size()<<endl;
 }
+
+bool UserMenager::isUserLogged()
+{
+    if(idOfLoggedUser > 0)
+        return true;
+    else
+        return false;
+}
+
+void UserMenager::updateUserPassword()
+{
+    string newPassword = "";
+    cout << "Podaj nowe haslo: ";
+    cin >> newPassword;
+
+    for (int i=0; i<users.size(); i++)
+    {
+        if(users[i].getId()==idOfLoggedUser)
+        {
+            users[i].setPassword(newPassword);
+            cout << "Password changed." << endl << endl;
+            system("pause");
+        }
+    }
+    for (int i=0; i<users.size(); i++)
+    {
+        cout<< "ID = "<<users[i].getId()<<", nazwa = "<<users[i].getLogin()<< ", haslo = "<<users[i].getPassword()<<endl;
+    }
+system("pause");
+
+fileWithUsers.addAllUsersToFile(users);
+}
+
+
+
