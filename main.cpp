@@ -42,12 +42,8 @@ LOOP:
                     case '5':
                         myWallet.displayChoosenPeriodBalance();
                         break;
-                    case '6':
-
-                        break;
                     case '7':
                         myWallet.changePasswordOfUser();
-                        //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
                         break;
                     case '8':
                         myWallet.userLogout();
@@ -65,50 +61,4 @@ LOOP:
             break;
         }
     }
-
-
-
-
-
-
-    //myWallet.userRegistration();
-   myWallet.userLogin();
-
-  //myWallet.addIncomeOfLoggedUser();
-  //myWallet.addIncomeOfLoggedUser();
-   //myWallet.displayAllIncomes();
-   //myWallet.addOutcomeOfLoggedUser();
-
-   //myWallet.userLogin();
-   //myWallet.addOutcomeOfLoggedUser();
-   //myWallet.displayCurrentMonthBalance();
-//myWallet.displayLastMonthBalance();
-  myWallet.displayChoosenPeriodBalance();
-   //myWallet.displayAllIncomesInOrder();
-   //myWallet.dispiayAllUsers();
 }
-
-
-/*  Find element
-xml.FindElem(); // root ORDER element
-xml.IntoElem(); // inside ORDER
-while ( xml.FindElem("ITEM") )
-{
-    xml.IntoElem();
-    xml.FindElem( "SN" );
-    MCD_STR strSN = xml.GetData();
-    xml.FindElem( "QTY" );
-    int nQty = atoi( MCD_2PCSZ(xml.GetData()) );
-    xml.OutOfElem();
-}
-
- to find element contained in some ELEMENT
-xml.ResetPos(); // top of document
-xml.FindElem(); // ORDER element is root
-xml.IntoElem(); // inside ORDER
-while ( xml.FindElem("ITEM") )
-{
-    xml.FindChildElem( "SN" );
-    if ( xml.GetChildData() == strFindSN )
-        break; // found
-}*/

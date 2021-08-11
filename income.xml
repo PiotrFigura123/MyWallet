@@ -71,4 +71,12 @@
 <incomeValue>0</incomeValue>
 <incomeDateValue>1010767</incomeDateValue>
 </income>
+<income>
+<IncomeId>6</IncomeId>
+<userId>2</userId>
+<incomeDate>2021-08-11</incomeDate>
+<incomeComment>rt</incomeComment>
+<incomeValue>4</incomeValue>
+<incomeDateValue>1010767</incomeDateValue>
+</income>
 </incomes>
