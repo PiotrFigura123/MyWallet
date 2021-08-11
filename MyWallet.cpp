@@ -55,3 +55,9 @@ void MyWallet::displayLastMonthBalance()
     //outcomeMenager->displayChoosenPerionOutcomes();
     system("cls");
 }
+
+void MyWallet::displayChoosenPeriodBalance()
+{
+    system("cls");
+    incomeMenager->choosenPeriodIncomes();
+}

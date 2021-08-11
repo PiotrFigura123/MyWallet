@@ -23,6 +23,8 @@ class IncomeMenager
         string takeDateFromUser();
         string setCurrentDate();
         int convertDateIntoInt(string date);
+        void displayIncomesInChoosenPeriod(string startDate,string endDate);
+
 
 public:
     IncomeMenager(string nameOfFileWithIncomes, int idOfLoggedUser):
@@ -37,6 +39,7 @@ public:
     void displayAllIncomesInOrder();
     void displayCurrentMonthIncomesInOrder();
     void displayLastMonthIncomes();
+    void choosenPeriodIncomes();
 };
 
 

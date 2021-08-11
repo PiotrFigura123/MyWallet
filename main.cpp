@@ -9,14 +9,16 @@ int main()
     //myWallet.userRegistration();
    myWallet.userLogin();
 
-   myWallet.addIncomeOfLoggedUser();
+  //myWallet.addIncomeOfLoggedUser();
+  //myWallet.addIncomeOfLoggedUser();
    //myWallet.displayAllIncomes();
    //myWallet.addOutcomeOfLoggedUser();
 
    //myWallet.userLogin();
    //myWallet.addOutcomeOfLoggedUser();
    //myWallet.displayCurrentMonthBalance();
-   myWallet.displayLastMonthBalance();
+   //myWallet.displayLastMonthBalance();
+   myWallet.displayChoosenPeriodBalance();
    //myWallet.displayAllIncomesInOrder();
    //myWallet.dispiayAllUsers();
 }

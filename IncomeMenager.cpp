@@ -43,15 +43,6 @@ Income IncomeMenager::takeIncomeOfUser(int userId)
     return income;
 }
 
-/*int IncomeMenager::takeIdOfLastIncomeFromFile()
-
-{
-    if (incomes.empty() == true)
-        return 1;
-    else
-        return incomes.back().getIncomeId() + 1;
-}*/
-
 bool IncomeMenager::checkDate(int year, int month, int day)
 {
     cout<<"yeas: "<<year<< " month: "<<month<<" day: "<<day<<endl;
@@ -233,4 +224,66 @@ void IncomeMenager::displayLastMonthIncomes()
     cout<<"Sum of incomes = "<<sumOfIncomes<<endl;
 
     system("pause");
+}
+
+void IncomeMenager::choosenPeriodIncomes()
+{
+    string startDate,endDate,incomeDate;
+    cout<<"Start date, ";
+    startDate = takeDateFromUser();
+    cout<<"End date, ";
+    endDate = takeDateFromUser();
+
+    while((MetodyPomocnicze::convertDateIntoValue(startDate)>MetodyPomocnicze::convertDateIntoValue(endDate)))
+    {
+        cout<<"Start date should be before end date!!"<<endl;
+        cout<<"Start date, ";
+        startDate = takeDateFromUser();
+        cout<<"End date, ";
+        endDate = takeDateFromUser();
+    }
+
+    cout<<"Display all incomes from "<<startDate<<" till "<<endDate<<endl;
+
+    displayIncomesInChoosenPeriod(startDate,endDate);
+
+}
+
+void IncomeMenager::displayIncomesInChoosenPeriod(string startDate, string endDate)
+{
+    string startYear,endYear, startMonth,endMonth, startDay, endDay;
+    int sYear,eYear,sMonth,eMonth,sDay,eDay,startDateValue, endDateValue, incomeDateValue;
+    int sumOfIncomes=0;
+    /*startYear = startDate.substr(0,4);
+    startMonth = startDate.substr(5,2);
+    startDay = startDate.substr(7,2);
+    endYear = endDate.substr(0,4);
+    endMonth = endDate.substr(5,2);
+    endDay = endDate.substr(7,2);
+    sYear = MetodyPomocnicze::konwersjaStringNaInt(startYear);
+    eYear = MetodyPomocnicze::konwersjaStringNaInt(endYear);
+    sMonth = MetodyPomocnicze::konwersjaStringNaInt(startMonth);
+    eMonth = MetodyPomocnicze::konwersjaStringNaInt(endMonth);
+    sMonth = MetodyPomocnicze::konwersjaStringNaInt(startMonth);
+    eMonth = MetodyPomocnicze::konwersjaStringNaInt(endMonth);*/
+
+    startDateValue = MetodyPomocnicze::convertDateIntoValue(startDate);
+    endDateValue = MetodyPomocnicze::convertDateIntoValue(endDate);
+    cout<<"Im in intresting loop. Start Value ="<<startDateValue<<", EndValue ="<<endDateValue<<", Income size = "<<incomes.size()<<endl;
+    for (int i=0; i<incomes.size(); i++)
+    {
+        incomeDateValue = incomes[i].getIncomeDateValue();
+        //cout<<incomeDateValue<<endl;
+        if( incomeDateValue>startDateValue && incomeDateValue<endDateValue)
+        {
+            cout<<"incomeId: "<<incomes[i].getIncomeId()<<endl;
+            cout<<"data: "<<incomes[i].getIncomeDate()<<endl;
+            cout<<"Comment: "<<incomes[i].getIncomeComment()<<endl;
+            sumOfIncomes = sumOfIncomes+incomes[i].getIncomeValue();
+            cout<<"wartosc: "<<incomes[i].getIncomeValue()<<endl;
+        }
+    }
+    cout<<"Sum of incomes = "<<sumOfIncomes<<endl;
+
+
 }

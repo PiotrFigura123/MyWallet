@@ -116,20 +116,20 @@ double MetodyPomocnicze::convertDateIntoValue(string date)
     syear = date.substr(0,4);
     smonth = date.substr(5,2);
     sday = date.substr(8,2);
-    cout<<"syear ="<<syear<<" smonth ="<<smonth<<" sday = "<<sday<<endl;
+    //cout<<"syear ="<<syear<<" smonth ="<<smonth<<" sday = "<<sday<<endl;
 
     year = MetodyPomocnicze::konwersjaStringNaInt(syear);
     month = MetodyPomocnicze::konwersjaStringNaInt(smonth);
     day = MetodyPomocnicze::konwersjaStringNaInt(sday);
     system("pause");
-    cout<<"Year: "<<year<<endl;
-    cout<<"Month: "<<month<<endl;
-    cout<<"Day: "<<day<<endl;
+    //cout<<"Year: "<<year<<endl;
+    //cout<<"Month: "<<month<<endl;
+    //cout<<"Day: "<<day<<endl;
     year = year*500;
     month = month*32;
-    cout<<"Year: "<<year<<endl;
-    cout<<"Month: "<<month<<endl;
+    //cout<<"Year: "<<year<<endl;
+    //cout<<"Month: "<<month<<endl;
     sum = year+month+day;
-    cout<<"SUM = "<<sum<<endl;
+    //cout<<"SUM = "<<sum<<endl;
     return sum;
 }

@@ -39,6 +39,7 @@ public:
     void displayAllIncomesInOrder();
     void displayCurrentMonthBalance();
     void displayLastMonthBalance();
+    void displayChoosenPeriodBalance();
 };
 
 
