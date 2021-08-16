@@ -2,16 +2,18 @@
 #define INCOMEMENAGER_H
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include <fstream>
 #include <windows.h>
 #include <sstream>
+#include <string>
 #include "FileWithIncome.h"
 #include "Income.h"
 #include "UserMenager.h"
 #include "MetodyPomocnicze.h"
-
 #include "Markup.h"
 using namespace std;
+
 class IncomeMenager
 {
         const int LOGGED_USER_ID;
@@ -20,9 +22,6 @@ class IncomeMenager
         Income takeIncomeOfUser(int userId);
         int takeIdOfLastIncomeFromFile();
         bool checkDate(int year, int month, int day);
-        string takeDateFromUser();
-        string setCurrentDate();
-        int convertDateIntoInt(string date);
         void displayIncomesInChoosenPeriod(string startDate,string endDate);
 
 
@@ -32,15 +31,15 @@ public:
     {
 
     incomes = fileWithIncome.loadIncomeOfUserFromFile(LOGGED_USER_ID);
-    //cout<<"Jestem w konstruktorze. Incomes size = "<<endl;
+
     };
     void addIncomeOfLoggedUser(int userId);
-    //void displayAllIncomes();
     void displayAllIncomesInOrder();
     void displayCurrentMonthIncomesInOrder();
     void displayLastMonthIncomes();
     void choosenPeriodIncomes();
 };
+
 
 
 #endif

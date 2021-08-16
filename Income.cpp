@@ -17,7 +17,7 @@ string Income::getIncomeComment()
 {
     return incomeComment;
 }
-int Income::getIncomeValue()
+double Income::getIncomeValue()
 {
     return incomeValue;
 }
@@ -38,7 +38,7 @@ void Income::setIncomeComment(string newIncomeComment)
 {
     incomeComment = newIncomeComment;
 }
-void Income::setIncomevalue(int newIncomeValue)
+void Income::setIncomevalue(double newIncomeValue)
 {
     incomeValue = newIncomeValue;
 }

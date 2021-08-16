@@ -19,8 +19,7 @@ class OutcomeMenager
         Outcome takeOutcomeOfUser(int userId);
         int takeIdOfLastOutcomeFromFile();
         bool checkDate(int year, int month, int day);
-        string takeDateFromUser();
-        string setCurrentDate();
+        void displayOutcomesInChoosenPeriod(string startDate,string endDate);
 
 public:
     OutcomeMenager(string nameOfFileWithOutcomes, int idOfLoggedUser):
@@ -28,11 +27,13 @@ public:
     {
 
     outcomes = fileWithOutcome.loadOutcomeOfUserFromFile(LOGGED_USER_ID);
-    //cout<<"Jestem w konstruktorze. Outcomes size = "<<outcomes.size()<<endl;
+
     };
     void addOutcomeOfLoggedUser(int userId);
     void displayAllOutcomes();
     void displayCurrentMonthOutcomesInOrder();
+    void displayLastMonthOutcomes();
+    void choosenPeriodOutcomes();
 };
 
 

@@ -10,7 +10,7 @@ class Outcome
     int userId;
     string outcomeDate;
     string outcomeComment;
-    int outcomeValue;
+    double outcomeValue;
     double outcomeDateValue;
 
 public:
@@ -18,16 +18,17 @@ public:
     int getUserId();
     string getOutcomeDate();
     string getOutcomeComment();
-    int getOutcomeValue();
+    double getOutcomeValue();
     double getOutcomeDateValue();
 
     void setOutcomeId(int newOutcomeId);
     void setUserId(int newUserId);
     void setOutcomeDate(string newOutcomeDate);
     void setOutcomeComment(string newOutcomeComment);
-    void setOutcomevalue(int newOutcomeValue);
+    void setOutcomevalue(double newOutcomeValue);
     void setOutcomeDateValue(double newOutcomeDateValue);
 
+    bool operator<(Outcome& p){return outcomeDateValue <p.outcomeDateValue;}
 };
 
 #endif

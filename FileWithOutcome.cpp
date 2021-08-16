@@ -2,16 +2,16 @@
 
 vector <Outcome> FileWithOutcome::loadOutcomeOfUserFromFile(int LOGGED_USER_ID)
 {
-    //cout<<"LOGGED_USER_ID = "<<LOGGED_USER_ID<<endl;
+
     Outcome outcome;
     vector <Outcome> outcomes;
     int outcomeId;
     int user;
     string outcomeDate;
-    string outomeComment;
+    string outcomeComment;
     int outcomeValue;
 
-    bool bSuccess = xml.Load( "outcome.xml" );
+    bool bSuccess = xml.Load( NAME_OF_FILE_WITH_OUTCOMES );
     xml.FindElem();
     xml.IntoElem();
     while(xml.FindElem("outcome"))
@@ -19,11 +19,9 @@ vector <Outcome> FileWithOutcome::loadOutcomeOfUserFromFile(int LOGGED_USER_ID)
         xml.IntoElem();
         xml.FindElem("OutcomeId");
         outcome.setOutcomeId(atoi(MCD_2PCSZ(xml.GetData())));
-
         lastOutcomeId = atoi(MCD_2PCSZ(xml.GetData()));
         xml.FindElem("userId");
         user = (atoi(MCD_2PCSZ(xml.GetData())));
-
         if(user==LOGGED_USER_ID)
         {
             outcome.setUserId(user);
@@ -32,22 +30,26 @@ vector <Outcome> FileWithOutcome::loadOutcomeOfUserFromFile(int LOGGED_USER_ID)
             xml.FindElem( "outcomeComment" );
             outcome.setOutcomeComment(xml.GetData());
             xml.FindElem( "outcomeValue" );
-            outcome.setOutcomevalue(atoi(MCD_2PCSZ(xml.GetData())));
+            sumOfOutcomes = sumOfOutcomes+atoi(MCD_2PCSZ(xml.GetData()));
+            outcome.setOutcomevalue(stod(MCD_2PCSZ(xml.GetData())));
+
             xml.FindElem( "outcomeDateValue" );
             outcome.setOutcomeDateValue(atoi(MCD_2PCSZ(xml.GetData())));
+
             outcomes.push_back(outcome);
         }
 
         xml.OutOfElem();
     }
-    //cout<<"lastOutcome = "<<lastOutcomeId<<endl;
+
     return outcomes;
 }
 
 
+
 void FileWithOutcome::addOutcomeOfLoggedUser(Outcome outcome)
 {
-    bool bSuccess = xml.Load( "outcome.xml" );
+    bool bSuccess = xml.Load( NAME_OF_FILE_WITH_OUTCOMES );
 
     if(!bSuccess)
     {
@@ -61,7 +63,7 @@ void FileWithOutcome::addOutcomeOfLoggedUser(Outcome outcome)
     xml.AddElem( "userId", MetodyPomocnicze::konwerjsaIntNaString(outcome.getUserId()));
     xml.AddElem( "outcomeDate",outcome.getOutcomeDate());
     xml.AddElem( "outcomeComment", outcome.getOutcomeComment());
-    xml.AddElem( "outcomeValue", MetodyPomocnicze::konwerjsaIntNaString(outcome.getOutcomeValue()));
+    xml.AddElem( "outcomeValue", MetodyPomocnicze::konwerjsaDoubleNaString(outcome.getOutcomeValue()));
     xml.AddElem( "outcomeDateValue", MetodyPomocnicze::konwerjsaIntNaString(outcome.getOutcomeDateValue()));
     xml.Save( "outcome.xml" );
 

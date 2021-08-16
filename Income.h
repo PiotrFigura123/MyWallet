@@ -10,7 +10,7 @@ class Income
     int userId;
     string incomeDate;
     string incomeComment;
-    int incomeValue;
+    double incomeValue;
     double incomeDateValue;
 
 public:
@@ -18,17 +18,19 @@ public:
     int getUserId();
     string getIncomeDate();
     string getIncomeComment();
-    int getIncomeValue();
+    double getIncomeValue();
     double getIncomeDateValue();
 
     void setIncomeId(int newIncomeId);
     void setUserId(int newUserId);
     void setIncomeDate(string newIncomeDate);
     void setIncomeComment(string newIncomeComment);
-    void setIncomevalue(int newIncomeValue);
+    void setIncomevalue(double newIncomeValue);
     void setIncomeDateValue(double newIncomeDateValue);
 
+    bool operator<(Income& p){return incomeDateValue <p.incomeDateValue;}
 };
+
 
 #endif
 

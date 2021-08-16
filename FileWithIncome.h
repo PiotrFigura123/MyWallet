@@ -21,7 +21,8 @@ public:
     vector <Income> loadIncomeOfUserFromFile(int LOGGED_USER_ID);
     void addIncomeOfLoggedUser(Income income);
     int getLastincomeId();
-    int setNewLastincomeId();
+    void setNewLastincomeId(int id);
+    void setLastIncomeId(int id);
 };
 
 

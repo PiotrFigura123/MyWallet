@@ -3,6 +3,7 @@
 #include "UserMenager.h"
 
 using namespace std;
+
 int main()
 {
     MyWallet myWallet("users.xml", "income.xml", "outcome.xml");

@@ -52,7 +52,7 @@ void MyWallet::displayLastMonthBalance()
     system("cls");
     incomeMenager->displayLastMonthIncomes();
     system("cls");
-    //outcomeMenager->displayChoosenPerionOutcomes();
+    outcomeMenager->displayLastMonthOutcomes();
     system("cls");
 }
 
@@ -60,6 +60,9 @@ void MyWallet::displayChoosenPeriodBalance()
 {
     system("cls");
     incomeMenager->choosenPeriodIncomes();
+    system("cls");
+    outcomeMenager->choosenPeriodOutcomes();
+    system("cls");
 }
  bool  MyWallet::isUserLogged()
  {

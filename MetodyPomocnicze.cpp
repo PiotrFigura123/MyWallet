@@ -51,7 +51,6 @@ char MetodyPomocnicze::wybierzOpcjeZMenuUzytkownika()
     cout << "3. Display current month balance" << endl;
     cout << "4. Display last month balanc" << endl;
     cout << "5. Choose Your period and show balance" << endl;
-    cout << "6. none" << endl;
     cout << "---------------------------" << endl;
     cout << "7. Change password" << endl;
     cout << "8. Wyloguj sie" << endl;
@@ -84,7 +83,7 @@ char MetodyPomocnicze::wczytajZnak()
 bool MetodyPomocnicze::checkDate(int year, int month, int day)
 {
     if ((month = 1) || (month = 3) || (month = 5) || (month = 7) ||
-        (month = 8) || (month = 10) || (month = 12))
+            (month = 8) || (month = 10) || (month = 12))
     {
         day <= 31;
         return true;
@@ -96,8 +95,8 @@ bool MetodyPomocnicze::checkDate(int year, int month, int day)
     }
     else if ((month = 2) && (year % 4 == 0))
     {
-    day <= 29;
-    return true;
+        day <= 29;
+        return true;
     }
     else if ((month = 2) && (year % 4 != 0))
     {
@@ -116,20 +115,91 @@ double MetodyPomocnicze::convertDateIntoValue(string date)
     syear = date.substr(0,4);
     smonth = date.substr(5,2);
     sday = date.substr(8,2);
-    //cout<<"syear ="<<syear<<" smonth ="<<smonth<<" sday = "<<sday<<endl;
 
     year = MetodyPomocnicze::konwersjaStringNaInt(syear);
     month = MetodyPomocnicze::konwersjaStringNaInt(smonth);
     day = MetodyPomocnicze::konwersjaStringNaInt(sday);
-    system("pause");
-    //cout<<"Year: "<<year<<endl;
-    //cout<<"Month: "<<month<<endl;
-    //cout<<"Day: "<<day<<endl;
     year = year*500;
     month = month*32;
-    //cout<<"Year: "<<year<<endl;
-    //cout<<"Month: "<<month<<endl;
     sum = year+month+day;
-    //cout<<"SUM = "<<sum<<endl;
     return sum;
+}
+string MetodyPomocnicze:: konwerjsaDoubleNaString(double dbl)
+{
+    ostringstream strs;
+    strs << dbl;
+    string str = strs.str();
+    return str;
+}
+
+double MetodyPomocnicze::takeValueFromUser()
+{
+    string svalue;
+    cin >>svalue;
+    replace( svalue.begin(), svalue.end(), ',', '.');
+    double value = stod(svalue);
+    return value;
+}
+
+
+
+string MetodyPomocnicze::takeDateFromUser()
+{
+    int year=0,month=0,day=0;
+    string date;
+    do
+    {
+        cout<<" Year(after 2000): ";
+        cin>>year;
+        while(year<2000)
+        {
+            cout<<"Incorrect year, put new please: ";
+            cin>>year;
+        }
+
+        cout<<"Month: ";
+        cin>>month;
+        while( 1>month || month>12)
+        {
+            cout<<"Incorrect month, put new please: ";
+            cin>>month;
+        }
+        cout<<"Day: ";
+        cin>>day;
+
+    }
+    while(!checkDate(year,month,day));
+
+    string syear = MetodyPomocnicze::konwerjsaIntNaString(year);
+    string smonth = MetodyPomocnicze::konwerjsaIntNaString(month);
+    string sday = MetodyPomocnicze::konwerjsaIntNaString(day);
+    if(smonth.length()==1)
+        smonth = "0"+smonth;
+    if(sday.length()==1)
+        sday="0"+sday;
+    date = syear+"-"+smonth+"-"+sday;
+    return date;
+}
+
+string MetodyPomocnicze::setCurrentDate()
+{
+    int year, month, day;
+    string currentDay, syear,smonth,sday;
+    time_t now;
+    struct tm nowLocal;
+    now = time(NULL);
+    nowLocal = *localtime(&now);
+    year = nowLocal.tm_year+1900;
+    month = nowLocal.tm_mon+1;
+    day = nowLocal.tm_mday;
+    syear =  MetodyPomocnicze::konwerjsaIntNaString(nowLocal.tm_year+1900);
+    smonth = MetodyPomocnicze::konwerjsaIntNaString(nowLocal.tm_mon+1);
+    sday = MetodyPomocnicze::konwerjsaIntNaString(nowLocal.tm_mday);
+    if(smonth.length()==1)
+        smonth="0"+smonth;
+    if(sday.length()==1)
+        sday="0"+sday;
+    currentDay = syear+"-"+smonth+"-"+sday;
+    return currentDay;
+
 }

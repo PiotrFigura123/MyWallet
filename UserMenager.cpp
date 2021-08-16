@@ -119,11 +119,6 @@ void UserMenager::updateUserPassword()
             system("pause");
         }
     }
-    for (int i=0; i<users.size(); i++)
-    {
-        cout<< "ID = "<<users[i].getId()<<", nazwa = "<<users[i].getLogin()<< ", haslo = "<<users[i].getPassword()<<endl;
-    }
-system("pause");
 
 fileWithUsers.addAllUsersToFile(users);
 }

@@ -17,7 +17,7 @@ string Outcome::getOutcomeComment()
 {
     return outcomeComment;
 }
-int Outcome::getOutcomeValue()
+double Outcome::getOutcomeValue()
 {
     return outcomeValue;
 }
@@ -39,7 +39,7 @@ void Outcome::setOutcomeComment(string newOutcomeComment)
 {
     outcomeComment = newOutcomeComment;
 }
-void Outcome::setOutcomevalue(int newOutcomeValue)
+void Outcome::setOutcomevalue(double newOutcomeValue)
 {
     outcomeValue = newOutcomeValue;
 }

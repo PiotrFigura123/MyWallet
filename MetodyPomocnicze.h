@@ -2,6 +2,13 @@
 #define METODYPOMOCNICZE_H
 #include <iostream>
 #include <sstream>
+#include <string>
+#include <algorithm>
+#include <windows.h>
+#include <time.h>
+
+
+
 
 using namespace std;
 class MetodyPomocnicze
@@ -15,7 +22,10 @@ class MetodyPomocnicze
         static char wybierzOpcjeZMenuUzytkownika();
         static bool checkDate(int year, int month , int day);
         static double convertDateIntoValue(string date);
-
+        static string konwerjsaDoubleNaString(double liczba);
+        static double takeValueFromUser();
+        static string takeDateFromUser();
+        static string setCurrentDate();
 };
 
 #endif // METODYPOMOCNICZE_H

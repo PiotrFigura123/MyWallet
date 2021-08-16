@@ -50,19 +50,23 @@
 	"MetodyPomocnicze.h"
 	"Markup.h"
 
-1628686140 source:c:\users\admin\desktop\mywallet\metodypomocnicze.cpp
+1629111638 source:c:\users\admin\desktop\mywallet\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 
-1628242011 c:\users\admin\desktop\mywallet\metodypomocnicze.h
+1629111819 c:\users\admin\desktop\mywallet\metodypomocnicze.h
 	<iostream>
 	<sstream>
+	<string>
+	<algorithm>
+	<windows.h>
+	<time.h>
 
-1628686950 source:c:\users\admin\desktop\mywallet\main.cpp
+1629108216 source:c:\users\admin\desktop\mywallet\main.cpp
 	<iostream>
 	"MyWallet.h"
 	"UserMenager.h"
 
-1628688568 source:c:\users\admin\desktop\mywallet\usermenager.cpp
+1629111303 source:c:\users\admin\desktop\mywallet\usermenager.cpp
 	"UserMenager.h"
 
 1627654988 source:c:\users\admin\desktop\mywallet\users.cpp
@@ -74,7 +78,7 @@
 1628692369 source:c:\users\admin\desktop\mywallet\filewithusers.cpp
 	"FileWithUsers.h"
 
-1628688384 source:c:\users\admin\desktop\mywallet\mywallet.cpp
+1629111134 source:c:\users\admin\desktop\mywallet\mywallet.cpp
 	"MyWallet.h"
 
 1628686950 c:\users\admin\desktop\mywallet\mywallet.h
@@ -97,7 +101,7 @@
 	"FileWithIncome.h"
 	"OutcomeMenager.h"
 
-1628688568 c:\users\admin\desktop\mywallet\filewithusers.h
+1629096458 c:\users\admin\desktop\mywallet\filewithusers.h
 	<iostream>
 	<time.h>
 	<vector>
@@ -105,47 +109,49 @@
 	"Users.h"
 	"Markup.h"
 
-1628686950 source:c:\users\admin\desktop\mywallet\incomemenager.cpp
+1629117032 source:c:\users\admin\desktop\mywallet\incomemenager.cpp
 	"IncomeMenager.h"
 
-1628601455 source:c:\users\admin\desktop\mywallet\outcomemenager.cpp
+1629117141 source:c:\users\admin\desktop\mywallet\outcomemenager.cpp
 	"OutcomeMenager.h"
 
-1628242539 source:c:\users\admin\desktop\mywallet\outcome.cpp
+1629109953 source:c:\users\admin\desktop\mywallet\outcome.cpp
 	"Outcome.h"
 
-1628242029 source:c:\users\admin\desktop\mywallet\income.cpp
+1629101990 source:c:\users\admin\desktop\mywallet\income.cpp
 	"Income.h"
 
-1628242011 c:\users\admin\desktop\mywallet\income.h
+1629116567 c:\users\admin\desktop\mywallet\income.h
 	<iostream>
 
-1628601455 source:c:\users\admin\desktop\mywallet\filewithincome.cpp
+1629108839 source:c:\users\admin\desktop\mywallet\filewithincome.cpp
 	"FileWithIncome.h"
 
-1628601455 source:c:\users\admin\desktop\mywallet\filewithoutcome.cpp
+1629117253 source:c:\users\admin\desktop\mywallet\filewithoutcome.cpp
 	"FileWithOutcome.h"
 
-1628680842 c:\users\admin\desktop\mywallet\incomemenager.h
+1629116567 c:\users\admin\desktop\mywallet\incomemenager.h
 	<iostream>
 	<vector>
+	<algorithm>
 	<fstream>
 	<windows.h>
 	<sstream>
+	<string>
 	"FileWithIncome.h"
 	"Income.h"
 	"UserMenager.h"
 	"MetodyPomocnicze.h"
 	"Markup.h"
 
-1628598276 c:\users\admin\desktop\mywallet\filewithincome.h
+1629101000 c:\users\admin\desktop\mywallet\filewithincome.h
 	<iostream>
 	<vector>
 	"Income.h"
 	"Markup.h"
 	"MetodyPomocnicze.h"
 
-1628242339 c:\users\admin\desktop\mywallet\outcome.h
+1629117141 c:\users\admin\desktop\mywallet\outcome.h
 	<iostream>
 
 1628169865 c:\users\admin\desktop\mywallet\filewithoutcome.h
@@ -155,7 +161,7 @@
 	"Markup.h"
 	"MetodyPomocnicze.h"
 
-1628601455 c:\users\admin\desktop\mywallet\outcomemenager.h
+1629113114 c:\users\admin\desktop\mywallet\outcomemenager.h
 	<iostream>
 	<vector>
 	<fstream>
