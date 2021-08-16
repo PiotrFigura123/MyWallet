@@ -63,4 +63,12 @@
 <outcomeValue>2.2</outcomeValue>
 <outcomeDateValue>1010093</outcomeDateValue>
 </outcome>
+<outcome>
+<OutcomeId>9</OutcomeId>
+<userId>1</userId>
+<outcomeDate>2019-02-12</outcomeDate>
+<outcomeComment>qwe wer</outcomeComment>
+<outcomeValue>3.4</outcomeValue>
+<outcomeDateValue>1009576</outcomeDateValue>
+</outcome>
 </outcomes>

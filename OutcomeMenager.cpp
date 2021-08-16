@@ -31,7 +31,8 @@ Outcome OutcomeMenager::takeOutcomeOfUser(int userId)
     outcomeDateValue = MetodyPomocnicze::convertDateIntoValue(outcomeDate);
     cout<<endl<<"Date: "<<outcomeDate<<endl;
     cout<<"Outcome comment: ";
-    cin>>outcomeComment;
+    cin.ignore();
+    getline(cin, outcomeComment);
     cout<<"Outcome value: ";
     outcomeValue = MetodyPomocnicze::takeValueFromUser();
 

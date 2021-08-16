@@ -31,7 +31,8 @@ Income IncomeMenager::takeIncomeOfUser(int userId)
     incomeDateValue = MetodyPomocnicze::convertDateIntoValue(incomeDate);
     cout<<endl<<"Date: "<<incomeDate<<endl;
     cout<<"Income comment: ";
-     cin >>incomeComment;
+    cin.ignore();
+    getline(cin, incomeComment);
 
     cout<<"Income value: ";
     incomeValue = MetodyPomocnicze::takeValueFromUser();
@@ -72,9 +73,6 @@ void IncomeMenager::displayCurrentMonthIncomesInOrder()
     cout<<"Sum of incomes = "<<sumOfIncomes<<endl;
     system("pause");
 }
-
-
-
 
 void IncomeMenager::displayLastMonthIncomes()
 {
