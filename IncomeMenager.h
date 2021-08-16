@@ -21,7 +21,6 @@ class IncomeMenager
         FileWithIncome fileWithIncome;
         Income takeIncomeOfUser(int userId);
         int takeIdOfLastIncomeFromFile();
-        bool checkDate(int year, int month, int day);
         void displayIncomesInChoosenPeriod(string startDate,string endDate);
 
 
@@ -34,7 +33,6 @@ public:
 
     };
     void addIncomeOfLoggedUser(int userId);
-    void displayAllIncomesInOrder();
     void displayCurrentMonthIncomesInOrder();
     void displayLastMonthIncomes();
     void choosenPeriodIncomes();

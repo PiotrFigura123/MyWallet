@@ -18,7 +18,6 @@ class OutcomeMenager
         FileWithOutcome fileWithOutcome;
         Outcome takeOutcomeOfUser(int userId);
         int takeIdOfLastOutcomeFromFile();
-        bool checkDate(int year, int month, int day);
         void displayOutcomesInChoosenPeriod(string startDate,string endDate);
 
 public:

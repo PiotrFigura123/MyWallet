@@ -35,10 +35,6 @@ void  MyWallet::dispiayAllUsers()
     userMenager.displauAllUsers();
 }
 
-void MyWallet::displayAllIncomesInOrder()
-{
-   incomeMenager->displayAllIncomesInOrder();
-}
 
 void MyWallet::displayCurrentMonthBalance()
 {   system("cls");

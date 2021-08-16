@@ -30,18 +30,18 @@ public:
         incomeMenager = NULL;
         outcomeMenager =NULL;
     };
-    void userRegistration();
-    void userLogin();
-    void userLogout();
-    void addIncomeOfLoggedUser();
-    void addOutcomeOfLoggedUser();
-    void dispiayAllUsers();
-    void displayAllIncomesInOrder();
-    void displayCurrentMonthBalance();
-    void displayLastMonthBalance();
-    void displayChoosenPeriodBalance();
-    bool isUserLogged();
-    void changePasswordOfUser();
+void userRegistration();
+void userLogin();
+void userLogout();
+void addIncomeOfLoggedUser();
+void addOutcomeOfLoggedUser();
+void dispiayAllUsers();
+void displayAllIncomesInOrder();
+void displayCurrentMonthBalance();
+void displayLastMonthBalance();
+void displayChoosenPeriodBalance();
+bool isUserLogged();
+void changePasswordOfUser();
 };
 
 

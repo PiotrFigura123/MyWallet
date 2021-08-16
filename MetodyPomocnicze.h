@@ -6,26 +6,23 @@
 #include <algorithm>
 #include <windows.h>
 #include <time.h>
-
-
-
-
 using namespace std;
 class MetodyPomocnicze
 {
-    static char wczytajZnak();
-    public:
-        static string konwerjsaIntNaString(int liczba);
-        static int konwersjaStringNaInt(string liczba);
-        static string wczytajLinie();
-        static char wybierzOpcjeZMenuGlownego();
-        static char wybierzOpcjeZMenuUzytkownika();
-        static bool checkDate(int year, int month , int day);
-        static double convertDateIntoValue(string date);
-        static string konwerjsaDoubleNaString(double liczba);
-        static double takeValueFromUser();
-        static string takeDateFromUser();
-        static string setCurrentDate();
+static bool checkDate(int year, int month , int day);
+public:
+static string konwerjsaIntNaString(int liczba);
+static int konwersjaStringNaInt(string liczba);
+static string wczytajLinie();
+static char wybierzOpcjeZMenuGlownego();
+static char wybierzOpcjeZMenuUzytkownika();
+
+static double convertDateIntoValue(string date);
+static string konwerjsaDoubleNaString(double liczba);
+static double takeValueFromUser();
+static string takeDateFromUser();
+static string setCurrentDate();
+static char wczytajZnak();
 };
 
 #endif // METODYPOMOCNICZE_H

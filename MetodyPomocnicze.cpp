@@ -21,7 +21,6 @@ string MetodyPomocnicze::wczytajLinie()
     cin>>wejscie;
     return wejscie;
 }
-
 char MetodyPomocnicze::wybierzOpcjeZMenuGlownego()
 {
     char wybor;
@@ -38,7 +37,6 @@ char MetodyPomocnicze::wybierzOpcjeZMenuGlownego()
 
     return wybor;
 }
-
 char MetodyPomocnicze::wybierzOpcjeZMenuUzytkownika()
 {
     char wybor;
@@ -60,7 +58,6 @@ char MetodyPomocnicze::wybierzOpcjeZMenuUzytkownika()
 
     return wybor;
 }
-
 char MetodyPomocnicze::wczytajZnak()
 {
     string wejscie = "";
@@ -79,34 +76,53 @@ char MetodyPomocnicze::wczytajZnak()
     }
     return znak;
 }
-
 bool MetodyPomocnicze::checkDate(int year, int month, int day)
 {
-    if ((month = 1) || (month = 3) || (month = 5) || (month = 7) ||
-            (month = 8) || (month = 10) || (month = 12))
+    cout<<"yeas: "<<year<< " month: "<<month<<" day: "<<day<<endl;
+    if ((month == 1) || (month == 3) || (month == 5) || (month == 7) ||(month == 8) || (month == 10) || (month == 12))
     {
-        day <= 31;
-        return true;
+        if(day <= 31)
+        {
+            return true;
+        }
+        else
+            cout<<"Outcorrect date, please provide new one"<<endl;
+        return false;
     }
-    else if ((month = 4) || (month = 6) || (month = 9) || (month = 11))
+    else if ((month == 4) || (month == 6) || (month == 9) || (month == 11))
     {
-        day <= 30;
-        return true;
+        if(day <= 30)
+        {
+            return true;
+        }
+        else
+            cout<<"Incorrect date, please provide new one"<<endl;
+        return false;
     }
-    else if ((month = 2) && (year % 4 == 0))
+    else if ((month == 2) && (year % 4 == 0))
     {
-        day <= 29;
-        return true;
+        if(day <= 29)
+        {
+            return true;
+        }
+        else
+            cout<<"Incorrect date, please provide new one"<<endl;
+        return false;
     }
-    else if ((month = 2) && (year % 4 != 0))
+    else if ((month == 2) && (year % 4 != 0))
     {
-        day <= 28;
-        return true;
+        if(day <= 28)
+        {
+            return true;
+        }
+        else
+            cout<<"Incorrect date, please provide new one"<<endl;
+        return false;
     }
     else
-        return false;
+        cout<<"Incorrect date, please provide new one"<<endl;
+    return false;
 }
-
 double MetodyPomocnicze::convertDateIntoValue(string date)
 {
     double sum=0;
@@ -131,7 +147,6 @@ string MetodyPomocnicze:: konwerjsaDoubleNaString(double dbl)
     string str = strs.str();
     return str;
 }
-
 double MetodyPomocnicze::takeValueFromUser()
 {
     string svalue;
@@ -140,9 +155,6 @@ double MetodyPomocnicze::takeValueFromUser()
     double value = stod(svalue);
     return value;
 }
-
-
-
 string MetodyPomocnicze::takeDateFromUser()
 {
     int year=0,month=0,day=0;
@@ -180,7 +192,6 @@ string MetodyPomocnicze::takeDateFromUser()
     date = syear+"-"+smonth+"-"+sday;
     return date;
 }
-
 string MetodyPomocnicze::setCurrentDate()
 {
     int year, month, day;
@@ -203,3 +214,4 @@ string MetodyPomocnicze::setCurrentDate()
     return currentDay;
 
 }
+

@@ -23,7 +23,8 @@ Income IncomeMenager::takeIncomeOfUser(int userId)
     cout<<"Current date? [y/n] : ";
     cin>>chooseDate;
     if(chooseDate=='n')
-        incomeDate = MetodyPomocnicze::takeDateFromUser();
+         incomeDate = MetodyPomocnicze::takeDateFromUser();
+
     else
         incomeDate = MetodyPomocnicze::setCurrentDate();
 
@@ -43,68 +44,6 @@ Income IncomeMenager::takeIncomeOfUser(int userId)
     income.setIncomevalue(incomeValue);
     income.setIncomeDateValue(incomeDateValue);
     return income;
-}
-
-bool IncomeMenager::checkDate(int year, int month, int day)
-{
-    cout<<"yeas: "<<year<< " month: "<<month<<" day: "<<day<<endl;
-    if ((month == 1) || (month == 3) || (month == 5) || (month == 7) ||(month == 8) || (month == 10) || (month == 12))
-    {
-        if(day <= 31)
-        {
-            return true;
-        }
-        else
-            cout<<"Incorrect date, please provide new one"<<endl;
-        return false;
-    }
-    else if ((month == 4) || (month == 6) || (month == 9) || (month == 11))
-    {
-        if(day <= 30)
-        {
-            return true;
-        }
-        else
-            cout<<"Incorrect date, please provide new one"<<endl;
-        return false;
-    }
-    else if ((month == 2) && (year % 4 == 0))
-    {
-        if(day <= 29)
-        {
-            return true;
-        }
-        else
-            cout<<"Incorrect date, please provide new one"<<endl;
-        return false;
-    }
-    else if ((month == 2) && (year % 4 != 0))
-    {
-        if(day <= 28)
-        {
-            return true;
-        }
-        else
-            cout<<"Incorrect date, please provide new one"<<endl;
-        return false;
-    }
-    else
-        cout<<"Incorrect date, please provide new one"<<endl;
-    return false;
-}
-
-void IncomeMenager::displayAllIncomesInOrder()
-{
-    for (int i=0; i<incomes.size(); i++)
-    {
-
-        cout<<"InomeId: "<< incomes[i].getIncomeId()<<endl;
-        cout<<"userId: "<<incomes[i].getUserId()<<endl;
-        cout<<"data: "<<incomes[i].getIncomeDate()<<endl;
-        cout<<"Comment: "<<incomes[i].getIncomeComment()<<endl;
-        cout<<"wartosc: "<<incomes[i].getIncomeValue()<<endl;
-
-    }
 }
 
 void IncomeMenager::displayCurrentMonthIncomesInOrder()

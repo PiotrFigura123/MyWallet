@@ -55,7 +55,7 @@ void FileWithUsers::addUserToFile(User user)
 
 }
 
-void FileWithUsers::currentDate()
+/*void FileWithUsers::currentDate()
 {
     int rok, miesiac, dzien;
     string currentDay, year,month,day;
@@ -72,7 +72,7 @@ void FileWithUsers::currentDate()
     day = MetodyPomocnicze::konwerjsaIntNaString(nowLocal.tm_mday);
     currentDay = year+"-"+month+"-"+day;
     cout<<currentDay<<endl;
-}
+}*/
 
 
 
