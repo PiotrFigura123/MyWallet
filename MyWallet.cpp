@@ -42,6 +42,10 @@ void MyWallet::displayCurrentMonthBalance()
     system("cls");
     outcomeMenager->displayCurrentMonthOutcomesInOrder();
     system("cls");
+    cout<<"Incomes = "<<incomeMenager->getSumOfIncomes()<<endl;
+    cout<<"Outcomes = "<<outcomeMenager->getSumOfOutcomes()<<endl;
+    cout<<"Balance = " <<incomeMenager->getSumOfIncomes() - outcomeMenager->getSumOfOutcomes()<<endl;
+    system("pause");
 }
 void MyWallet::displayLastMonthBalance()
 {
@@ -50,6 +54,10 @@ void MyWallet::displayLastMonthBalance()
     system("cls");
     outcomeMenager->displayLastMonthOutcomes();
     system("cls");
+    cout<<"Incomes = "<<incomeMenager->getSumOfIncomes()<<endl;
+    cout<<"Outcomes = "<<outcomeMenager->getSumOfOutcomes()<<endl;
+    cout<<"Balance = " <<incomeMenager->getSumOfIncomes() - outcomeMenager->getSumOfOutcomes()<<endl;
+    system("pause");
 }
 
 void MyWallet::displayChoosenPeriodBalance()
