@@ -54,11 +54,19 @@ void MyWallet::displayLastMonthBalance()
 
 void MyWallet::displayChoosenPeriodBalance()
 {
+    system("CLS");
+    cout<<"Start date: ";
+    string startDate = MetodyPomocnicze::takeDateFromUser();
+    cout<<"End date: ";
+    string endDate = MetodyPomocnicze::takeDateFromUser();
+    incomeMenager->choosenPeriodIncomes(startDate, endDate);
     system("cls");
-    incomeMenager->choosenPeriodIncomes();
+    outcomeMenager->choosenPeriodOutcomes(startDate, endDate);
     system("cls");
-    outcomeMenager->choosenPeriodOutcomes();
-    system("cls");
+    cout<<"Incomes = "<<incomeMenager->getSumOfIncomes()<<endl;
+    cout<<"Outcomes = "<<outcomeMenager->getSumOfOutcomes()<<endl;
+    cout<<"Balance = " <<incomeMenager->getSumOfIncomes() - outcomeMenager->getSumOfOutcomes()<<endl;
+    system("pause");
 }
  bool  MyWallet::isUserLogged()
  {

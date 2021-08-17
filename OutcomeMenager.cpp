@@ -24,9 +24,9 @@ Outcome OutcomeMenager::takeOutcomeOfUser(int userId)
     cout<<"Current date? [y/n] : ";
     cin>>chooseDate;
     if(chooseDate=='n')
-    outcomeDate = MetodyPomocnicze::takeDateFromUser();
+        outcomeDate = MetodyPomocnicze::takeDateFromUser();
     else
-    outcomeDate = MetodyPomocnicze::setCurrentDate();
+        outcomeDate = MetodyPomocnicze::setCurrentDate();
 
     outcomeDateValue = MetodyPomocnicze::convertDateIntoValue(outcomeDate);
     cout<<endl<<"Date: "<<outcomeDate<<endl;
@@ -65,7 +65,7 @@ void OutcomeMenager::displayCurrentMonthOutcomesInOrder()
 {
     string currentMonth;
     string outcomeMonth;
-    double sumOfOutcomes=0;
+    sumOfOutcomes=0;
     currentMonth = (MetodyPomocnicze::setCurrentDate()).substr(0,7);
     sort(outcomes.begin(),outcomes.end());
     system("CLS");
@@ -73,16 +73,13 @@ void OutcomeMenager::displayCurrentMonthOutcomesInOrder()
     for (int i=0; i<outcomes.size(); i++)
     {
         outcomeMonth = (outcomes[i].getOutcomeDate()).substr(0,7);
-
         if( currentMonth == outcomeMonth)
         {
-        cout<<"data: "<<outcomes[i].getOutcomeDate()<<endl;
-        cout<<"Comment: "<<outcomes[i].getOutcomeComment()<<endl;
-        sumOfOutcomes = sumOfOutcomes+outcomes[i].getOutcomeValue();
-        cout<<"wartosc: "<<outcomes[i].getOutcomeValue()<<endl<<endl;
+            cout<<"data: "<<outcomes[i].getOutcomeDate()<<endl;
+            cout<<"Comment: "<<outcomes[i].getOutcomeComment()<<endl;
+            sumOfOutcomes = sumOfOutcomes+outcomes[i].getOutcomeValue();
+            cout<<"wartosc: "<<outcomes[i].getOutcomeValue()<<endl<<endl;
         }
-
-
     }
     cout<<"Sum of outcomes = "<<sumOfOutcomes<<endl;
     system("pause");
@@ -93,7 +90,7 @@ void OutcomeMenager::displayLastMonthOutcomes()
     sort(outcomes.begin(),outcomes.end());
     string lastMonthDate,outcomeDate, syear,smonth;
     int month;
-    double sumOfOutcomes=0;
+    sumOfOutcomes=0;
     syear = (MetodyPomocnicze::setCurrentDate()).substr(0,4);
     smonth = (MetodyPomocnicze::setCurrentDate()).substr(5,2);
     month = MetodyPomocnicze::konwersjaStringNaInt(smonth)-1;
@@ -106,7 +103,7 @@ void OutcomeMenager::displayLastMonthOutcomes()
     for (int i=0; i<outcomes.size(); i++)
     {
         outcomeDate = (outcomes[i].getOutcomeDate()).substr(0,7);
-      if( outcomeDate == lastMonthDate)
+        if( outcomeDate == lastMonthDate)
         {
             cout<<"data: "<<outcomes[i].getOutcomeDate()<<endl;
             cout<<"Comment: "<<outcomes[i].getOutcomeComment()<<endl;
@@ -119,21 +116,18 @@ void OutcomeMenager::displayLastMonthOutcomes()
     system("pause");
 }
 
-void OutcomeMenager::choosenPeriodOutcomes()
+void OutcomeMenager::choosenPeriodOutcomes(string startDate, string endDate)
 {
-    string startDate,endDate,incomeDate;
-    cout<<"Start date, ";
-    startDate = MetodyPomocnicze::takeDateFromUser();
-    cout<<"End date, ";
-    endDate = MetodyPomocnicze::takeDateFromUser();
+    string incomeDate;
+    cout<<"Start date, "<<startDate<<endl;
+    cout<<"End date, "<<endDate<<endl;
 
     while((MetodyPomocnicze::convertDateIntoValue(startDate)>MetodyPomocnicze::convertDateIntoValue(endDate)))
     {
         cout<<"Start date should be before end date!!"<<endl;
         cout<<"Start date, ";
-        startDate = MetodyPomocnicze::takeDateFromUser();
         cout<<"End date, ";
-        endDate = MetodyPomocnicze::takeDateFromUser();
+
     }
 
     cout<<"Display all incomes from "<<startDate<<" till "<<endDate<<endl;
@@ -146,7 +140,7 @@ void OutcomeMenager::displayOutcomesInChoosenPeriod(string startDate, string end
 {
     sort(outcomes.begin(),outcomes.end());
     int startDateValue, endDateValue, outcomeDateValue;
-    double sumOfOutcomes=0;
+    sumOfOutcomes=0;
 
     startDateValue = MetodyPomocnicze::convertDateIntoValue(startDate);
     endDateValue = MetodyPomocnicze::convertDateIntoValue(endDate);
@@ -164,7 +158,12 @@ void OutcomeMenager::displayOutcomesInChoosenPeriod(string startDate, string end
         }
     }
     cout<<"Sum of outcomes = "<<sumOfOutcomes<<endl;
-system("pause");
+    system("pause");
 
+}
+
+double OutcomeMenager::getSumOfOutcomes()
+{
+    return sumOfOutcomes;
 }
 

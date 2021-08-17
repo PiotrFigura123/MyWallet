@@ -6,11 +6,13 @@
 #include <algorithm>
 #include <windows.h>
 #include <time.h>
+#include "FileWithBalance.h"
 using namespace std;
 class MetodyPomocnicze
 {
-static bool checkDate(int year, int month , int day);
+
 public:
+static bool checkDate(int year, int month , int day);
 static string konwerjsaIntNaString(int liczba);
 static int konwersjaStringNaInt(string liczba);
 static string wczytajLinie();
@@ -23,6 +25,8 @@ static double takeValueFromUser();
 static string takeDateFromUser();
 static string setCurrentDate();
 static char wczytajZnak();
+
+
 };
 
 #endif // METODYPOMOCNICZE_H

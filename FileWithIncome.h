@@ -23,6 +23,7 @@ public:
     int getLastincomeId();
     void setNewLastincomeId(int id);
     void setLastIncomeId(int id);
+    int getSumOfIncomes();
 };
 
 

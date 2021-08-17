@@ -12,6 +12,7 @@
 #include "UserMenager.h"
 #include "MetodyPomocnicze.h"
 #include "Markup.h"
+#include "FileWithBalance.h"
 using namespace std;
 
 class IncomeMenager
@@ -19,10 +20,12 @@ class IncomeMenager
         const int LOGGED_USER_ID;
         vector <Income> incomes;
         FileWithIncome fileWithIncome;
+        FileWithBalance fileWithBalance;
         Income takeIncomeOfUser(int userId);
         int takeIdOfLastIncomeFromFile();
         void displayIncomesInChoosenPeriod(string startDate,string endDate);
-
+        string startDate;
+        double sumOfIncomes;
 
 public:
     IncomeMenager(string nameOfFileWithIncomes, int idOfLoggedUser):
@@ -35,7 +38,8 @@ public:
     void addIncomeOfLoggedUser(int userId);
     void displayCurrentMonthIncomesInOrder();
     void displayLastMonthIncomes();
-    void choosenPeriodIncomes();
+    void choosenPeriodIncomes(string startDate, string endDate);
+    double getSumOfIncomes();
 };
 
 

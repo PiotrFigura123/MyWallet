@@ -10,8 +10,9 @@
 #include "MetodyPomocnicze.h"
 #include "Outcome.h"
 #include "Markup.h"
+#include "FileWithBalance.h"
 using namespace std;
-class OutcomeMenager
+class OutcomeMenager:public FileWithBalance
 {
         const int LOGGED_USER_ID;
         vector <Outcome> outcomes;
@@ -19,6 +20,7 @@ class OutcomeMenager
         Outcome takeOutcomeOfUser(int userId);
         int takeIdOfLastOutcomeFromFile();
         void displayOutcomesInChoosenPeriod(string startDate,string endDate);
+        double sumOfOutcomes;
 
 public:
     OutcomeMenager(string nameOfFileWithOutcomes, int idOfLoggedUser):
@@ -32,7 +34,9 @@ public:
     void displayAllOutcomes();
     void displayCurrentMonthOutcomesInOrder();
     void displayLastMonthOutcomes();
-    void choosenPeriodOutcomes();
+    void choosenPeriodOutcomes(string startDate, string endDate);
+    double getSumOfOutcomes();
+
 };
 
 

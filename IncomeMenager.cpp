@@ -53,7 +53,7 @@ void IncomeMenager::displayCurrentMonthIncomesInOrder()
 
     string currentMonth;
     string incomeMonth;
-    double sumOfIncomes=0;
+    sumOfIncomes=0;
     currentMonth = (MetodyPomocnicze::setCurrentDate()).substr(0,7);
     cout<< " ------INCOMES------"<<endl;
     for (int i=0; i<incomes.size(); i++)
@@ -79,7 +79,7 @@ void IncomeMenager::displayLastMonthIncomes()
     sort(incomes.begin(),incomes.end());
     string lastMonthDate,incomeDate, syear,smonth;
     int month;
-    double sumOfIncomes=0;
+    sumOfIncomes=0;
     syear = (MetodyPomocnicze::setCurrentDate()).substr(0,4);
     smonth = (MetodyPomocnicze::setCurrentDate()).substr(5,2);
     month = MetodyPomocnicze::konwersjaStringNaInt(smonth)-1;
@@ -105,14 +105,11 @@ void IncomeMenager::displayLastMonthIncomes()
     system("pause");
 }
 
-void IncomeMenager::choosenPeriodIncomes()
+void IncomeMenager::choosenPeriodIncomes(string startDate, string endDate)
 {
-    string startDate,endDate,incomeDate;
-    cout<<"Start date, ";
-    startDate = MetodyPomocnicze::takeDateFromUser();
-    cout<<"End date, ";
-    endDate = MetodyPomocnicze::takeDateFromUser();
-
+    string incomeDate;
+    cout<<"Start date, "<<startDate<<endl;
+    cout<<"End date, "<<endDate<<endl;
     while((MetodyPomocnicze::convertDateIntoValue(startDate)>MetodyPomocnicze::convertDateIntoValue(endDate)))
     {
         cout<<"Start date should be before end date!!"<<endl;
@@ -120,6 +117,7 @@ void IncomeMenager::choosenPeriodIncomes()
         startDate = MetodyPomocnicze::takeDateFromUser();
         cout<<"End date, ";
         endDate = MetodyPomocnicze::takeDateFromUser();
+
     }
 
     cout<<"Display all incomes from "<<startDate<<" till "<<endDate<<endl;
@@ -131,7 +129,7 @@ void IncomeMenager::choosenPeriodIncomes()
 void IncomeMenager::displayIncomesInChoosenPeriod(string startDate, string endDate)
 {
     int startDateValue, endDateValue, incomeDateValue;
-    double sumOfIncomes=0;
+    sumOfIncomes=0;
 
     sort(incomes.begin(),incomes.end());
     startDateValue = MetodyPomocnicze::convertDateIntoValue(startDate);
@@ -153,4 +151,9 @@ void IncomeMenager::displayIncomesInChoosenPeriod(string startDate, string endDa
     cout<<"Sum of incomes = "<<sumOfIncomes<<endl;
 system("pause");
 
+}
+
+double IncomeMenager::getSumOfIncomes()
+{
+    return sumOfIncomes;
 }

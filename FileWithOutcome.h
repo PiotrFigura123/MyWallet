@@ -22,6 +22,7 @@ public:
     void addOutcomeOfLoggedUser(Outcome outcome);
     int getLastOutcomeId();
     int setNewLastOutcomeId();
+    int getSumOfOutcomes();
 };
 
 

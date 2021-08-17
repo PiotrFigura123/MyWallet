@@ -5,7 +5,7 @@
 #include "UserMenager.h"
 #include "IncomeMenager.h"
 #include "OutcomeMenager.h"
-
+#include "FileWithBalance.h"
 using namespace std;
 
 class MyWallet
@@ -13,6 +13,7 @@ class MyWallet
     UserMenager userMenager;
     IncomeMenager *incomeMenager;
     OutcomeMenager *outcomeMenager;
+    FileWithBalance fileWithBalance;
     const string NAME_OF_FILE_WITH_INCOMES;
     const string NAME_OF_FILE_WITH_OUTCOMES;
 

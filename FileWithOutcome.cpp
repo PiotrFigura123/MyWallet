@@ -80,3 +80,7 @@ int FileWithOutcome::setNewLastOutcomeId()
     return  lastOutcomeId ;
 }
 
+int FileWithOutcome::getSumOfOutcomes()
+{
+    return sumOfOutcomes;
+}

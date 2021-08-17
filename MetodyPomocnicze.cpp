@@ -1,5 +1,6 @@
 #include "MetodyPomocnicze.h"
 
+void choosenPeriod();
 string MetodyPomocnicze::konwerjsaIntNaString(int liczba)
 {
     ostringstream ss;
@@ -192,6 +193,7 @@ string MetodyPomocnicze::takeDateFromUser()
     date = syear+"-"+smonth+"-"+sday;
     return date;
 }
+
 string MetodyPomocnicze::setCurrentDate()
 {
     int year, month, day;

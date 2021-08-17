@@ -84,6 +84,11 @@ void FileWithIncome::setLastIncomeId(int id)
     lastIncomeId = id;
 }
 
+int FileWithIncome::getSumOfIncomes()
+{
+    return sumOfIncomes;
+}
+
 
 
 
